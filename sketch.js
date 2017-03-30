@@ -1,14 +1,14 @@
 // global variables
 var s;
 var scl = 20;
-
 var food;
 
+// function to set up game and canvas
 function setup() {
 	createCanvas(600, 600);
-	s = new Snake();
-	frameRate(10);
-	food = pickLocation();
+	s = new Snake();			// create instance of snake
+	frameRate(15);				// lower frame rate (slow down speed)
+	food = pickLocation();		// pick initial position to spawn food
 }
 
 // function to pick location for food to spawn
@@ -35,6 +35,7 @@ function draw() {
 	rect(food.x, food.y, scl, scl);
 }
 
+// function for moving snake
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
 		s.dir(0, -1);
