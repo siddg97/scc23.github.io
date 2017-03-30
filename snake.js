@@ -1,3 +1,12 @@
+/*
+TO DO:
+- game over when snake hits wall
+- don't let snake move backwards
+- don't let food spawn inside snake
+- start game screen option?
+- game over screen option?
+*/
+
 // constructor function for snake
 function Snake() {
 	// initialize objects
