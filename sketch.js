@@ -16,11 +16,12 @@ function setup() {
 function pickLocation() {
 	var cols = floor(width/scl);
 	var rows = floor(height/scl);
+	[lbl] repickLocation;
 	food = createVector(floor(random(cols)), floor(random(rows)));
 	// make sure food does not spawn inside snake
 	for (var i = 0; i < snake.tail.length; i++) {
 		if ( (food.x === snake.x && food.y === snake.y) || (food.x === snake.tail[i].x && food.y === snake.tail[i].y) ) {
-			pickLocation();
+			goto repickLocation;
 		}
 	}
 	food.mult(scl);
