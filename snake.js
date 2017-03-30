@@ -21,6 +21,7 @@ function Snake() {
 		}
 	}
 
+	// function for moving snake
 	this.dir = function(x, y) {
 		this.xspeed = x;
 		this.yspeed = y;
@@ -42,6 +43,7 @@ function Snake() {
 		}
 	}
 
+	// function to update snake
 	this.update = function() {
 		if (this.total === this.tail.length) {
 			for (var i = 0; i < this.tail.length-1; i++) {
@@ -57,7 +59,8 @@ function Snake() {
 		this.y = constrain(this.y, 0, height-scl);
 	}
 
-	this.show = function() {
+	// functino to display snake
+	this.display = function() {
 		fill(255);	// colour white for snake
 		for (var i = 0; i < this.tail.length; i++) {
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);

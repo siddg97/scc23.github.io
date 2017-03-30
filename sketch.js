@@ -1,13 +1,13 @@
 // global variables
-var s;
+var snake;
 var scl = 20;
 var food;
-canvasSize = 600;
+var canvasSize = 600;
 
 // function to set up game and canvas
 function setup() {
 	createCanvas(canvasSize, canvasSize);
-	s = new Snake();			// create instance of snake
+	snake = new Snake();			// create instance of snake
 	frameRate(10);				// lower frame rate (slow down speed)
 	pickLocation();				// pick initial position to spawn food
 }
@@ -18,8 +18,8 @@ function pickLocation() {
 	var rows = floor(height/scl);
 	food = createVector(floor(random(cols)), floor(random(rows)));
 	// make sure food does not spawn inside snake
-	for (var i = 0; i < s.tail.length; i++) {
-		if ( (food.x === s.x && food.y === s.y) || (food.x === s.tail[i].x && food.y === s.tail[i].y) ) {
+	for (var i = 0; i < snake.tail.length; i++) {
+		if ( (food.x === snake.x && food.y === snake.y) || (food.x === snake.tail[i].x && food.y === snake.tail[i].y) ) {
 			pickLocation();
 		}
 	}
@@ -28,18 +28,18 @@ function pickLocation() {
 
 // for testing, increase length of snake by clicking left mouse button
 function mousePressed() {
-	s.total++;
+	snake.total++;
 }
 
 function draw() {
 	background(51);
 
-	if (s.eat(food)) {
+	if (snake.eat(food)) {
 		pickLocation();
 	}
-	s.gameOver();
-	s.update();
-	s.show();
+	snake.gameOver();
+	snake.update();
+	snake.display();
 
 	fill(255, 0, 100);	// red/pink colour for food
 	rect(food.x, food.y, scl, scl);
@@ -49,19 +49,19 @@ function draw() {
 function keyPressed() {
 	// up arrow or W
 	if (keyCode === UP_ARROW || keyCode === 87) {
-		s.dir(0, -1);
+		snake.dir(0, -1);
 	}
 	// down arrow or S
 	else if (keyCode === DOWN_ARROW || keyCode == 83) {
-		s.dir(0, 1);
+		snake.dir(0, 1);
 	}
 	// right arrow or D
 	else if (keyCode === RIGHT_ARROW || keyCode == 68) {
-		s.dir(1, 0);
+		snake.dir(1, 0);
 	}
 	// left arrow or A
 	else if (keyCode === LEFT_ARROW || keyCode == 65) {
-		s.dir(-1, 0);
+		snake.dir(-1, 0);
 	}
 }
 
