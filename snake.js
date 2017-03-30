@@ -1,8 +1,8 @@
 // constructor function for snake
 function Snake() {
 	// initialize objects
-	this.x = 0;
-	this.y = 0;
+	this.x = 300;
+	this.y = 300;
 	this.xspeed = 1;
 	this.yspeed = 0;
 	this.total = 0;
@@ -30,6 +30,8 @@ function Snake() {
 	this.gameOver = function() {
 		// if snake hit edge of box
 		if (this.x > canvasSize || thix.y > canvasSize) {
+			this.x = 300;
+			this.y = 300;
 			this.total = 0;
 			this.tail = [];
 		}
@@ -39,6 +41,8 @@ function Snake() {
 			var d = dist(this.x, this.y, pos.x, pos.y);
 			// if died (lost), reset everything
 			if (d < 1) {
+				this.x = 300;
+				this.y = 300;
 				this.total = 0;
 				this.tail = [];
 			}
