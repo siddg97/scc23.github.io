@@ -3,7 +3,7 @@ function Snake() {
 	// initialize objects
 	this.x = canvasSize/2;	// place snake in middle of canvas
 	this.y = canvasSize/2;
-	this.xspeed = 1;
+	this.xspeed = 0;
 	this.yspeed = 0;
 	this.total = 0;
 	this.tail = [];			// empty array for tail to add on
@@ -37,6 +37,8 @@ function Snake() {
 			if (d < 1 || this.x === canvasSize || thix.y === canvasSize) {
 				this.x = canvasSize/2;
 				this.y = canvasSize/2;
+				this.xspeed = 0;
+				this.yspeed = 0;
 				this.total = 0;
 				this.tail = [];
 			}
