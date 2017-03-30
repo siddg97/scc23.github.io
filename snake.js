@@ -1,12 +1,12 @@
 // constructor function for snake
 function Snake() {
 	// initialize objects
-	this.x = 300;
-	this.y = 300;
+	this.x = canvasSize/2;	// place snake in middle of canvas
+	this.y = canvasSize/2;
 	this.xspeed = 1;
 	this.yspeed = 0;
 	this.total = 0;
-	this.tail = [];		// empty array for tail to add on
+	this.tail = [];			// empty array for tail to add on
 
 	// function to determine if snake ate food
 	this.eat = function(pos) {
@@ -30,8 +30,8 @@ function Snake() {
 	this.gameOver = function() {
 		// // if snake hit edge of box
 		// if (this.x > canvasSize || thix.y > canvasSize) {
-		// 	this.x = 300;
-		// 	this.y = 300;
+		// 	this.x = canvasSize/2;
+		// 	this.y = canvasSize/2;
 		// 	this.total = 0;
 		// 	this.tail = [];
 		// }
