@@ -16,18 +16,18 @@ function setup() {
 function pickLocation() {
 	var cols = floor(width/scl);
 	var rows = floor(height/scl);
-	[lbl] repickLocation;
+	// [lbl] repickLocation;
 	food = createVector(floor(random(cols)), floor(random(rows)));
-	// make sure food does not spawn inside snake
-	for (var i = 0; i < snake.tail.length; i++) {
-		if ( (food.x === snake.x && food.y === snake.y) || (food.x === snake.tail[i].x && food.y === snake.tail[i].y) ) {
-			goto repickLocation;
-		}
-	}
+	// // make sure food does not spawn inside snake
+	// for (var i = 0; i < snake.tail.length; i++) {
+	// 	if ( (food.x === snake.x && food.y === snake.y) || (food.x === snake.tail[i].x && food.y === snake.tail[i].y) ) {
+	// 		goto repickLocation;
+	// 	}
+	// }
 	food.mult(scl);
 }
 
-// for testing, increase length of snake by clicking left mouse button
+// for testing, increase length of snake by clicking left/right mouse button
 function mousePressed() {
 	snake.total++;
 }
