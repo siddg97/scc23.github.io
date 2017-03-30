@@ -44,15 +44,15 @@ function keyPressed() {
 		s.dir(0, -1);
 	}
 	// down arrow or S
-	else if (keyCode === DOWN_ARROW || keyCode == 83) {
+	else if (keyCode === DOWN_ARROW) {
 		s.dir(0, 1);
 	}
 	// right arrow or D
-	else if (keyCode === RIGHT_ARROW || keyCode == 68) {
+	else if (keyCode === RIGHT_ARROW) {
 		s.dir(1, 0);
 	}
 	// left arrow or A
-	else if (keyCode === LEFT_ARROW || keyCode == 65) {
+	else if (keyCode === LEFT_ARROW) {
 		s.dir(-1, 0);
 	}
 }
