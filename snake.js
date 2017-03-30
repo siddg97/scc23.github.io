@@ -3,7 +3,7 @@ function Snake() {
 	// initialize objects
 	this.x = canvasSize/2;	// place snake in middle of canvas
 	this.y = canvasSize/2;
-	this.xspeed = 0;
+	this.xspeed = 1;
 	this.yspeed = 0;
 	this.total = 0;
 	this.tail = [];			// empty array for tail to add on
@@ -33,12 +33,9 @@ function Snake() {
 			var pos = this.tail[i];
 			var d = dist(this.x, this.y, pos.x, pos.y);
 			// if died (lost), reset everything
-			// lose by hitting itself or hitting edge of box
-			if (d < 1 || this.x === canvasSize || thix.y === canvasSize) {
+			if (d < 1) {
 				this.x = canvasSize/2;
 				this.y = canvasSize/2;
-				this.xspeed = 0;
-				this.yspeed = 0;
 				this.total = 0;
 				this.tail = [];
 			}
