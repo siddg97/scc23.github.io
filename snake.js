@@ -1,4 +1,6 @@
+// constructor function for snake
 function Snake() {
+	// objects
 	this.x = 0;
 	this.y = 0;
 	this.xspeed = 1;
