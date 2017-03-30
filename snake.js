@@ -29,13 +29,6 @@ function Snake() {
 
 	// function to determine if snake died (player lost)
 	this.gameOver = function() {
-		if (this.x === canvasSize-1 || this.y === canvasSize-1) {
-			this.x = canvasSize/2;
-			this.y = canvasSize/2;
-			this.total = 0;
-			this.tail = [];
-			return;
-		}
 		for (var i = 0; i < this.tail.length; i++) {
 			var pos = this.tail[i];
 			var d = dist(this.x, this.y, pos.x, pos.y);
