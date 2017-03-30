@@ -11,7 +11,7 @@ function Snake() {
 	// function to determine if snake ate food
 	this.eat = function(pos) {
 		var d = dist(this.x, this.y, pos.x, pos.y);
-		// whether or not snake reached the food
+		// check if snake reached the food
 		if (d < 1) {
 			this.total++;	// if snake ate food, increment total
 			return true;
@@ -29,7 +29,7 @@ function Snake() {
 
 	// function to determine if snake died (player lost)
 	this.gameOver = function() {
-		if (this.x === canvasSize && this.y === canvasSize) {
+		if (this.x === canvasSize || this.y === canvasSize) {
 			this.x = canvasSize/2;
 			this.y = canvasSize/2;
 			this.total = 0;

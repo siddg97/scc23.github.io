@@ -33,15 +33,14 @@ function mousePressed() {
 }
 
 function draw() {
-	// background(51);
-	background(255, 204, 0);
+	background(51);		// dark gray background colour
 
 	if (snake.eat(food)) {
 		pickLocation();
 	}
-	snake.gameOver();
-	snake.update();
-	snake.display();
+	snake.gameOver();	// check if game over
+	snake.update();		// update snake
+	snake.display();	// display snake
 
 	fill(255, 0, 100);
 	rect(food.x, food.y, scl, scl);
