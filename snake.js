@@ -28,21 +28,14 @@ function Snake() {
 
 	// function to determine if snake died (player lost)
 	this.gameOver = function() {
-		// // if snake hit edge of box
-		// if (this.x > canvasSize || thix.y > canvasSize) {
-		// 	this.x = canvasSize/2;
-		// 	this.y = canvasSize/2;
-		// 	this.total = 0;
-		// 	this.tail = [];
-		// }
-
 		for (var i = 0; i < this.tail.length; i++) {
 			var pos = this.tail[i];
 			var d = dist(this.x, this.y, pos.x, pos.y);
 			// if died (lost), reset everything
-			if (d < 1) {
-				this.x = 300;
-				this.y = 300;
+			// lose by hitting itself or hitting edge of box
+			if (d < 1 || this.x === canvasSize || thix.y === canvasSize) {
+				this.x = canvasSize/2;
+				this.y = canvasSize/2;
 				this.total = 0;
 				this.tail = [];
 			}
