@@ -2,10 +2,11 @@
 var s;
 var scl = 20;
 var food;
+canvasSize = 600;
 
 // function to set up game and canvas
 function setup() {
-	createCanvas(600, 600);
+	createCanvas(canvasSize, canvasSize);
 	s = new Snake();			// create instance of snake
 	frameRate(10);				// lower frame rate (slow down speed)
 	pickLocation();				// pick initial position to spawn food
@@ -19,6 +20,7 @@ function pickLocation() {
 	food.mult(scl);
 }
 
+// for testing, increase length of snake by clicking left mouse button
 function mousePressed() {
 	s.total++;
 }
@@ -29,7 +31,7 @@ function draw() {
 	if (s.eat(food)) {
 		pickLocation();
 	}
-	s.death();
+	s.gameOver();
 	s.update();
 	s.show();
 
