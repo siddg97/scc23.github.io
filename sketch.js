@@ -33,7 +33,8 @@ function mousePressed() {
 }
 
 function draw() {
-	background(51);
+	// background(51);
+	background(255, 204, 0);
 
 	if (snake.eat(food)) {
 		pickLocation();
@@ -42,7 +43,7 @@ function draw() {
 	snake.update();
 	snake.display();
 
-	fill(255, 0, 100);	// red/pink colour for food
+	fill(255, 0, 100);
 	rect(food.x, food.y, scl, scl);
 }
 
