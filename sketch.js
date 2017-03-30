@@ -25,8 +25,6 @@ function mousePressed() {
 
 function draw() {
 	background(51);
-	s.update();
-	s.show();
 
 	if (s.eat(food)) {
 		pickLocation();
