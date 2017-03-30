@@ -29,7 +29,7 @@ function Snake() {
 
 	// function to determine if snake died (player lost)
 	this.gameOver = function() {
-		if (this.x === canvasSize || this.y === canvasSize) {
+		if (this.x === canvasSize-1 || this.y === canvasSize-1) {
 			this.x = canvasSize/2;
 			this.y = canvasSize/2;
 			this.total = 0;
