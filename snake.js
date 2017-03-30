@@ -8,11 +8,6 @@ function Snake() {
 	this.total = 0;
 	this.tail = [];		// empty array for tail to add on
 
-	this.dir = function(x, y) {
-		this.xspeed = x;
-		this.yspeed = y;
-	}
-
 	// function to determine if snake ate food
 	this.eat = function(pos) {
 		var d = dist(this.x, this.y, pos.x, pos.y);
@@ -26,6 +21,11 @@ function Snake() {
 		}
 	}
 
+	this.dir = function(x, y) {
+		this.xspeed = x;
+		this.yspeed = y;
+	}
+
 	// function to determine if snake died
 	this.death = function() {
 		for (var i = 0; i < this.tail.length; i++) {
@@ -33,7 +33,7 @@ function Snake() {
 			var d = dis(this.x, this.y, pos.x, pos.y);
 			// if died, reset everything
 			if (d < 1) {
-				total = 0;
+				this.total = 0;
 				this.tail = [];
 			}
 		}
