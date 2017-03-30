@@ -1,23 +1,24 @@
 // constructor function for snake
 function Snake() {
-	// objects
+	// initialize objects
 	this.x = 0;
 	this.y = 0;
 	this.xspeed = 1;
 	this.yspeed = 0;
 	this.total = 0;
-	this.tail = [];
+	this.tail = [];		// empty array for tail to add on
 
 	this.dir = function(x, y) {
 		this.xspeed = x;
 		this.yspeed = y;
 	}
 
+	// function to determine if snake ate food
 	this.eat = function(pos) {
 		var d = dist(this.x, this.y, pos.x, pos.y);
 		// whether or not snake reached the food
 		if (d < 1) {
-			this.total++;
+			this.total++;	// if snake ate food, increment total
 			return true;
 		}
 		else {
@@ -25,11 +26,12 @@ function Snake() {
 		}
 	}
 
+	// function to determine if snake died
 	this.death = function() {
 		for (var i = 0; i < this.tail.length; i++) {
 			var pos = this.tail[i];
 			var d = dis(this.x, this.y, pos.x, pos.y);
-			// reset everything
+			// if died, reset everything
 			if (d < 1) {
 				total = 0;
 				this.tail = [];

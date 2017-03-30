@@ -8,15 +8,19 @@ function setup() {
 	createCanvas(600, 600);
 	s = new Snake();			// create instance of snake
 	frameRate(15);				// lower frame rate (slow down speed)
-	food = pickLocation();		// pick initial position to spawn food
+	pickLocation();		// pick initial position to spawn food
 }
 
 // function to pick location for food to spawn
 function pickLocation() {
 	var cols = floor(width/scl);
-	var rows = floor(hieght/scl);
+	var rows = floor(height/scl);
 	food = createVector(floor(random(cols)), floor(random(rows)));
 	food.mult(scl);
+}
+
+function mousePressed() {
+	s.total++;
 }
 
 function draw() {
@@ -37,16 +41,20 @@ function draw() {
 
 // function for moving snake
 function keyPressed() {
-	if (keyCode === UP_ARROW) {
+	// up arrow or W
+	if (keyCode === UP_ARROW || keyCode === 87) {
 		s.dir(0, -1);
 	}
-	else if (keyCode === DOWN_ARROW) {
+	// down arrow or S
+	else if (keyCode === DOWN_ARROW || keyCode == 83) {
 		s.dir(0, 1);
 	}
-	else if (keyCode === RIGHT_ARROW) {
+	// right arrow or D
+	else if (keyCode === RIGHT_ARROW || keyCode == 68) {
 		s.dir(1, 0);
 	}
-	else if (keyCode === LEFT_ARROW) {
+	// left arrow or A
+	else if (keyCode === LEFT_ARROW || keyCode == 65) {
 		s.dir(-1, 0);
 	}
 }
