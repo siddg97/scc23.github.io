@@ -33,7 +33,7 @@ function draw() {
 	s.update();
 	s.show();
 
-	fill(255, 0, 100);
+	fill(255, 0, 100);	// red/pink colour for food
 	rect(food.x, food.y, scl, scl);
 }
 
