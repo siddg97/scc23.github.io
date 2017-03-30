@@ -7,7 +7,7 @@ var food;
 function setup() {
 	createCanvas(600, 600);
 	s = new Snake();			// create instance of snake
-	frameRate(15);				// lower frame rate (slow down speed)
+	frameRate(10);				// lower frame rate (slow down speed)
 	pickLocation();		// pick initial position to spawn food
 }
 

@@ -47,8 +47,8 @@ function Snake() {
 		}
 		this.tail[this.total-1] = createVector(this.x, this.y);
 
-		this.x = this.x + this.xspeed*scl;
-		this.y = this.y + this.yspeed*scl;
+		this.x = this.x + this.xspeed * scl;
+		this.y = this.y + this.yspeed * scl;
 
 		this.x = constrain(this.x, 0, width-scl);
 		this.y = constrain(this.y, 0, height-scl);
@@ -59,6 +59,6 @@ function Snake() {
 		for (var i = 0; i < this.tail.length; i++) {
 			rect(this.tail[i].x, this.tail[i].y, scl, scl);
 		}
-		rect(this.x, this.y, 10, 10);
+		rect(this.x, this.y, scl, scl);
 	}
 }
