@@ -30,7 +30,7 @@ function Snake() {
 	this.death = function() {
 		for (var i = 0; i < this.tail.length; i++) {
 			var pos = this.tail[i];
-			var d = dis(this.x, this.y, pos.x, pos.y);
+			var d = dist(this.x, this.y, pos.x, pos.y);
 			// if died, reset everything
 			if (d < 1) {
 				this.total = 0;
