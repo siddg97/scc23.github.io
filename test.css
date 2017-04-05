@@ -1,3 +1,7 @@
+/*import google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 html, body {
     width: 100%;
     margin: 0px;
@@ -28,8 +32,9 @@ html, body {
 /*for top navigation bar*/
 #navigation h1 {
   position: absolute;
+  font-family: 'Cinzel-bold';
   /*font-size: 35px; */
-  font-size: 1.8vw;
+  font-size: 2vw;
   /*top: 30px; */
   top: 1.5vw;
   /*left: 250px; */
@@ -39,9 +44,10 @@ html, body {
 }
 #navigation ul {
   position: absolute;
-  font-size: 0.85vw;
+  font-family: 'Quicksand';
+  font-size: 1.2vw;
   /*top: 50px;*/
-  top: 2.5vw;
+  top: 2vw;
   /*right: 250px;*/
   right: 9vw;
   display: inline;
@@ -50,7 +56,6 @@ html, body {
 #navigation ul li {
   display: inline;
   margin-right: 30px;
-  font-family: 'helvetica';
 }
 #navigation ul li a {
   text-decoration: none;
@@ -58,10 +63,11 @@ html, body {
 }
 /*text and info on cover image*/
 #cover-text h1 {
-  letter-spacing: 2px;
+  /*letter-spacing: 2px;*/
   position: absolute;
+  font-family: 'Cinzel-bold';
   /*font-size: 55px; */
-  font-size: 3vw; 
+  font-size: 3.3vw; 
   /*top: 300px; */
   top: 14vw;
   /*left: 230px; */
@@ -77,6 +83,7 @@ html, body {
 
 /*stuff for About section*/
 h1#about {
+  font-family: 'Cinzel-bold';
   margin-top: 60px;
   margin-bottom: 45px;
   text-align: center;
@@ -100,6 +107,7 @@ h1#about {
   margin-right: 30px;
 }
 #about-profile p {
+  font-family: 'Cinzel-bold';
   text-align: center;
 }
 .profile-picture {
@@ -109,9 +117,9 @@ h1#about {
   height: 200px;
 }
 p#profile-info {
-  font-family: 'helvetica';
+  font-family: 'Quicksand';
   font-size: 16px;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
 }
 /*style for icons with links*/
 img#icon {
@@ -124,6 +132,7 @@ a#icon {
 }
 /*box*/
 #about-contents {
+  font-family: 'Cinzel-bold';
   padding: 20px; 
   text-align: left;
   width: 745px;
@@ -134,8 +143,8 @@ a#icon {
   margin-right: 20px;
 }
 #about-contents p {
-  font-family: 'helvetica';
-  letter-spacing: 3px;
+  font-family: 'Quicksand';
+  /*letter-spacing: 3px;*/
   margin-left: 20px;
   margin-right: 20px;
 }
