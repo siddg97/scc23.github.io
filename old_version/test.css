@@ -1,0 +1,152 @@
+/*import google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    padding-bottom: 50px;
+}
+
+/*use this so that navigation stays at top of window*/
+#parent {
+  position: relative;
+}
+/*for cover image*/
+#cover div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  background-image: url("kaws.jpg");
+}
+#cover img {
+  position: relative;
+  max-width: 100%;
+  /*height: auto;*/
+  max-height: 100%;
+  filter:brightness(70%);
+}
+/*for top navigation bar*/
+#navigation h1 {
+  position: absolute;
+  font-family: 'Cinzel-bold';
+  /*font-size: 35px; */
+  font-size: 2vw;
+  /*top: 30px; */
+  top: 1.5vw;
+  /*left: 250px; */
+  left: 9vw;
+  width: 100%; 
+  color: white;
+}
+#navigation ul {
+  position: absolute;
+  font-family: 'Quicksand';
+  font-size: 1.2vw;
+  /*top: 50px;*/
+  top: 2vw;
+  /*right: 250px;*/
+  right: 9vw;
+  display: inline;
+  float: right;
+}
+#navigation ul li {
+  display: inline;
+  margin-right: 30px;
+}
+#navigation ul li a {
+  text-decoration: none;
+  color: white;
+}
+/*text and info on cover image*/
+#cover-text h1 {
+  /*letter-spacing: 2px;*/
+  position: absolute;
+  font-family: 'Cinzel-bold';
+  /*font-size: 55px; */
+  font-size: 3.3vw; 
+  /*top: 300px; */
+  top: 14vw;
+  /*left: 230px; */
+  left: 11vw;
+  width: 100%; 
+  color: white;
+}
+/*#cover-text p {
+  position: absolute;
+  top: 20vw;
+  left: 14vw;
+}*/
+
+/*stuff for About section*/
+h1#about {
+  font-family: 'Cinzel-bold';
+  margin-top: 60px;
+  margin-bottom: 45px;
+  text-align: center;
+  color: grey;
+}
+.about-container {
+  width: 1260px;
+  margin: auto;
+}
+/*box*/
+#about-profile {
+  /*font-family: 'helvetica';*/
+  padding: 20px; 
+  text-align: left;
+  /*letter-spacing:3px;*/
+  width: 305px;
+  height: 500px;
+  float: left;
+  margin-left: 20px;
+  background-color: #d4f6fc;
+  margin-right: 30px;
+}
+#about-profile p {
+  font-family: 'Cinzel-bold';
+  text-align: center;
+}
+.profile-picture {
+  margin-top: 85px;
+  border-radius: 50%;
+  width:200px;
+  height: 200px;
+}
+p#profile-info {
+  font-family: 'Quicksand';
+  font-size: 16px;
+  /*letter-spacing: 1px;*/
+}
+/*style for icons with links*/
+img#icon {
+  width: 35px;
+  margin: 3px;
+  border: 0 none;
+}
+a#icon {
+  text-decoration: none;
+}
+/*box*/
+#about-contents {
+  font-family: 'Cinzel-bold';
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; 
+  text-align: left;
+  width: 745px;
+  height: 500px;
+  float: left;
+  background-color: #d4f6fc;
+  color: black;
+  margin-right: 20px;
+}
+#about-contents p {
+  font-family: 'Quicksand';
+  /*letter-spacing: 3px;*/
+  margin-left: 20px;
+  margin-right: 20px;
+}
