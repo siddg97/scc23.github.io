@@ -3,18 +3,26 @@
 	<head>
 		<!-- link css -->
 		<link rel="stylesheet" href="test.css" type="text/css" />
-		<title>Test</title>
+		<title>Mobile</title>
 	</head>
 	<body>
 
-	<!-- cover image -->
+	<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- cover -->
 	<div id="parent">
-		<div id="cover">
-		  <img src="kaws2.jpg"/>
-		</div>
+
 		<!-- top navigation bar -->
-		<div id="navigation">
+		<div id="profile">
 			<h1>MY PROFILE</h1>
+		</div>
+
+		<!-- navigation menu button -->
+		<a href="#" id="menu-button">
+			<img src="images/menu.png" width="40">
+		</a>
+
+		<!-- navigation options -->
+		<div id="navigation">
 			<ul>
 			  <li><a href="#home">Home</a></li>
 			  <li><a href="#about">About</a></li>
@@ -22,117 +30,48 @@
 			  <li><a href="#contact">Contact</a></li>
 			</ul>
 		</div>
-		<div id="cover-text">
-			<h1>
-			Hi,<br/>WELCOME.
-			<br/>
-			<!-- links with icons -->
-			<a id="icon" href="https://www.facebook.com/shermanc62">
-				<img id="icon" src="fb.png"/>
-			</a>
-			<a id="icon" href="https://www.linkedin.com/in/sherman-chow-6b1b22127/">
-				<img id="icon" src="linkedin.png"/>
-			</a>
-			<a id="icon" href="https://github.com/scc23">
-				<img id="icon" src="github2.png"/>
-			</a>
-			<a id="icon" href="https://www.instagram.com/shermancwchow/?hl=en">
-				<img id="icon" src="instagram.png"/>
-			</a>
-			
-			</h1>
-			<!-- <p>
-				<a id="icon" href="https://www.facebook.com/shermanc62">
-					<img id="icon" src="fb.png"/>
-				</a>
-				<a id="icon" href="https://www.linkedin.com/in/sherman-chow-6b1b22127/">
-					<img id="icon" src="linkedin.png"/>
-				</a>
-				<a id="icon" href="https://github.com/scc23">
-					<img id="icon" src="github2.png"/>
-				</a>
-				<a id="icon" href="https://www.instagram.com/shermancwchow/?hl=en">
-					<img id="icon" src="instagram.png"/>
-				</a>
-			</p> -->
-		</div>
+
 	</div>
 
-	<!-- about me section -->
-	<h1 id="about">ABOUT ME</h1>
-	<div class="about-container">
-		<!-- left box -->
-		<div id="about-profile">
+	<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- About Me Section -->
+	<div id="about">
+		<h1>ABOUT ME</h1>
+		<!-- content box with color -->
+		<div id="about-box">
 			<center>
-				<img class=profile-picture src="sherman_photo.jpg" alt="My photo"/>
+				<img class=profile-picture src="images/sherman_photo.jpg" alt="My photo"/>
 			</center>
-			<p style="font-size: 22px;">
-				<b>SHERMAN CHOW</font></b>
-			</p>
-			<p id="profile-info">
-				Software Engineer Intern
-			</p>
-			<!-- icon images with links -->
-			<p>
+			<h2>SHERMAN CHOW</h2>
+			<h3>Software Engineer Intern</h3>
+
+			<!-- icons with links -->
+			<center>
 				<a id="icon" href="https://www.facebook.com/shermanc62">
-					<img id="icon" src="fb.png"/>
+					<img id="icon" src="images/fb.png"/>
 				</a>
 				<a id="icon" href="https://www.linkedin.com/in/sherman-chow-6b1b22127/">
-					<img id="icon" src="linkedin.png"/>
+					<img id="icon" src="images/linkedin.png"/>
 				</a>
 				<a id="icon" href="https://github.com/scc23">
-					<img id="icon" src="github.png"/>
+					<img id="icon" src="images/github.png"/>
 				</a>
 				<a id="icon" href="https://www.instagram.com/shermancwchow/?hl=en">
-					<img id="icon" src="instagram.png"/>
+					<img id="icon" src="images/instagram.png"/>
 				</a>
-			</p>
-
-
-
+			</center>
 
 		</div>
-		<!-- right box, technical skills -->
-		<div id="about-contents">
-			<h2 style="text-align: center;margin-bottom: 50px;">
-				TECHNICAL SKILLS
-			</h2>
-			<p>
-				<div style="font-family: 'Cinzel-bold';"><b>LANGUAGES:</b></div>
-				<br/>
-				<div style="font-family: 'Quicksand';padding-left: 1.8em;">
-					Python, Java, C, C++, HTML, CSS, JavaScript, MATLAB, Julia, Assembly Language (x86)
-				</div>
-				<br/><br/>
-				<div style="font-family: 'Cinzel-bold';">
-					<b>APPLICATIONS:</b>
-				</div>
-				<br/>
-				<div style="font-family: 'Quicksand';padding-left: 1.8em;">
-					Eclipse, Xcode, Microsoft Visual Studio, Sublime Text, Subversion, Fossil, Git, Microsoft Office, Adobe Photoshop, Adobe After Effects
-				</div>
-				<br/><br/>
-				<div style="font-family: 'Cinzel-bold';">
-					<b>OPERATING SYSTEMS:</b>
-				</div>
-				<br/>
-				<div style="font-family: 'Quicksand';padding-left: 1.8em;">
-					Windows, Mac OS, Linux, iOS, Android
-				</div>
-				<br/><br/>
-				<div style="font-family: 'Cinzel-bold';">
-					<b>CONCEPTS:</b>
-				</div>
-				<br/>
-				<div style="font-family: 'Quicksand';padding-left: 1.8em;">
-					Abstract Data Types, Sorting Methods, Object-Oriented Programming, Agile Development
-				</div>
-			</p>
-		</div>
+
+
 	</div>
 
 	<!-- link javascript -->
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/main.js"></script>
+
 	<!-- <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-	<script src='test.js'></script> -->
+	<script src='js/main.js'></script> -->
+
 	</body>
 </html>
