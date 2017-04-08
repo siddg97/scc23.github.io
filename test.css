@@ -28,7 +28,8 @@ body {
 #profile h1 {
   position: fixed;
   font-family: 'Cinzel';
-  font-size: 22px;
+  /*font-size: 22px;*/
+  font-size: 6.5vw;
   top: -5px;
   left: 30px;
   width: 100%; 
@@ -70,18 +71,21 @@ body {
   margin-top: 63vw;
   font-family: 'Cinzel'; 
   /*font-weight: bold;*/
-  font-size: 22px;
+  /*font-size: 22px;*/
+  font-size: 5.75vw;
   text-align: center;
 }
 #about h2 {
   font-family: 'Cinzel'; 
+  /*font-size: 18px;*/
+  font-size: 5vw;
   text-align: center;
-  font-size: 18px;
 }
 #about h3 {
   font-family: 'Quicksand';
+  /*font-size: 15px;*/
+  font-size: 4vw;
   text-align: center;
-  font-size: 15px;
 }
 #about-box {
   background-color: pink;
