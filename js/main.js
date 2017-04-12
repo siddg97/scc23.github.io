@@ -3,6 +3,21 @@
 
 $(document).ready(function() {
 
+	// have content transition in when loaded
+	$('body').hide();
+	$('body').fadeIn(1000);
+	// $('#parent').hide();
+	// $('#parent').fadeIn(1000);
+	// $('#about').hide();
+	// $('#about').fadeIn(1000);
+	// $('#gallery').hide();
+	// $('#gallery').fadeIn(1000);
+	// $('#contact').hide();
+	// $('#contact').fadeIn(1000);
+	// $('#back-to-top').hide();
+	// $('#back-to-top').fadeIn(1000);
+
+
 	// show/hide navigation menu
 	$('#navigation').hide();
 
@@ -54,5 +69,8 @@ $(document).ready(function() {
 	        }, 700);
 	    });
 	}
+
+
+
 
 });

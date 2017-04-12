@@ -109,11 +109,12 @@ body {
   text-align: center;
 }
 #about-profile-box {
-  background-color: lightblue;
+  background-color: #f7fbfc;
   margin-left: 4vw;
   margin-right:4vw;
+  margin-bottom: 6vw;
   padding: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 #about-profile-box img {
   border-radius: 50%;
@@ -132,11 +133,11 @@ img#icon {
 }
 
 #about-contents-box {
-  background-color: lightblue;
+  background-color: #f7fbfc;
   margin-left: 4vw;
   margin-right:4vw;
   padding: 40px;
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 #about-contents-box p {
@@ -157,28 +158,24 @@ img#icon {
 }
 
 #gallery img {
-  margin: 1.5vw;
+  margin: 1vw;
   opacity: 0.6;
   transition: opacity .5s ease-out;
   -moz-transition: opacity .5s ease-out;
   -webkit-transition: opacity .5s ease-out;
   -o-transition: opacity .5s ease-out;
+
+  width: 140px;
+  height: 140px;
 }
 
 #gallery img:hover {
   opacity: 1;
 }
 
-/*crop image to square*/
-.container {
-  float: left;
-  width: 190px;
-  height: 190px;
-  overflow: hidden;
-}
-.container img {
-  float: left;
-  width: 100%;
+#resize-image img {
+  width: 140px;
+  height: 140px;
 }
 
 #appear_image_div {
@@ -202,8 +199,8 @@ img#icon {
 /*/////////////////////////////////////////////////////////////////////////////////////*/
 /*Contact Section*/
 #contact {
-  width: 65%;
-  margin: auto;
+  /*width: 65%;*/
+  /*margin: auto;*/
 }
 
 #contact h1 {
@@ -211,7 +208,6 @@ img#icon {
   font-family: 'Cinzel';
   font-size: 5.75vw;
   font-weight: bold;
-  /*margin-top: 50vw;*/
   padding-top: 10vw;
   margin-bottom: 30px;
 }
@@ -219,7 +215,6 @@ img#icon {
 #contact img {
   width: 40px;
   height: 40px;
-  /*margin: 15px;*/
   margin-bottom: 20px;
   margin-left: 40px;
   border: 0 none;
@@ -228,45 +223,9 @@ img#icon {
 
 #contact p {
   font-family: 'Quicksand';
-  /*font-size: 3.5vw;*/
   font-size: 15px;
-  text-align: left;
-  margin-bottom: 42px;
-}
-
-#parent1, #parent2 {
-  width:110px;
-  height:110px;
-  /*border:1px solid red;*/
-  float:left;
-}
-
-/*for when window gets a little bit larger*/
-/*#contact img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 20px;
-  margin-left: 17vw;
-  border: 0 none;
-  display: block;
-}
-
-#contact p {
-  font-family: 'Quicksand';
-  font-size: 15px;
-  text-align: left;
-  margin-bottom: 42px;
-  margin-left: 2vw;
-}
-
-#parent1, #parent2 {
-  width:150px;
-  height:150px;
-  float:left;
-}*/
-
-#parent1 {
-  padding-top: 6px;
+  text-align: center;
+  margin: 35px;
 }
 
 /*back-to-top button*/ 
@@ -289,7 +248,7 @@ img#icon {
 /*for tablets*/
 @media only screen and (min-width: 600px) {
   body {
-      background-color: yellow;
+      /*background-color: yellow;*/
   }
 }
 
@@ -298,6 +257,6 @@ img#icon {
 /*for desktop*/
 @media only screen and (min-width: 768px) {
   body {
-      background-color: lightblue;
+      /*background-color: #889193;*/
   }
 }
