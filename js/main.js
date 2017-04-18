@@ -1,42 +1,69 @@
-// alert("SUP FAM");
-// document.body.style.backgroundColor = "orange";
-
 $(document).ready(function() {
 
-	// have content transition in when loaded
 	$('body').hide();
 	$('body').fadeIn(1000);
-	// $('#parent').hide();
-	// $('#parent').fadeIn(1000);
-	// $('#about').hide();
-	// $('#about').fadeIn(1000);
-	// $('#gallery').hide();
-	// $('#gallery').fadeIn(1000);
-	// $('#contact').hide();
-	// $('#contact').fadeIn(1000);
-	// $('#back-to-top').hide();
-	// $('#back-to-top').fadeIn(1000);
 
+	(function($) {
+	  /**
+	   * Copyright 2012, Digital Fusion
+	   * Licensed under the MIT license.
+	   * http://teamdf.com/jquery-plugins/license/
+	   *
+	   * @author Sam Sehnert
+	   * @desc A small plugin that checks whether elements are within
+	   *     the user visible viewport of a web browser.
+	   *     only accounts for vertical position, not horizontal.
+	   */
+	  $.fn.visible = function(partial) {
+	      var $t            = $(this),
+	          $w            = $(window),
+	          viewTop       = $w.scrollTop(),
+	          viewBottom    = viewTop + $w.height(),
+	          _top          = $t.offset().top,
+	          _bottom       = _top + $t.height(),
+	          compareTop    = partial === true ? _bottom : _top,
+	          compareBottom = partial === true ? _top : _bottom;
+	    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+	  };
+	})(jQuery);
 
-	// show/hide navigation menu
-	$('#navigation').hide();
+	var win = $(window);
+	var allMods = $("#about h1, #about p, #gallery h1, #gallery p, #myImg, #contact h1, #contact p");
 
-	$('#menu-button').click(function() {
-		$('#navigation').fadeToggle();
+	allMods.each(function(i, el) {
+	  var el = $(el);
+	  if (el.visible(true)) {
+	    el.addClass("already-visible"); 
+	  } 
 	});
 
 
-	// enlarge gallery images
-	$('#gallery img').click(function() {
-		var img = $(this).attr("src");
-		var appear_image = "<div id='appear_image_div' onClick='closeImage()'></div>";
-		appear_image = appear_image.concat("<img id='appear_image' src='"+img+"' />");
-		$('body').append(appear_image);
+	win.scroll(function(event) {
+	  allMods.each(function(i, el) {
+	    var el = $(el);
+	    if (el.visible(true)) {
+	      el.addClass("come-in"); 
+	    } 
+	  });
 	});
-	function closeImage() {
-		$('#appear_image_div').remove();
-		$('#appear_image').remove();
-	}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// automatic smooth scrolling when pressing navigation links
 	$(document).on('click', 'a', function(event){
@@ -45,32 +72,29 @@ $(document).ready(function() {
 	    $('html, body').animate({
 	        scrollTop: $( $.attr(this, 'href') ).offset().top
 	    }, 500);
-	});
+	});	
 
 	// automatic scroll to top smoothly when clicked arrow at bottom of page
-	if ($('#back-to-top').length) {
+	if ($('#backToTop').length) {
 	    var scrollTrigger = 100, // px
 	        backToTop = function () {
 	            var scrollTop = $(window).scrollTop();
 	            if (scrollTop > scrollTrigger) {
-	                $('#back-to-top').addClass('show');
+	                $('#backToTop').addClass('show');
 	            } else {
-	                $('#back-to-top').removeClass('show');
+	                $('#backToTop').removeClass('show');
 	            }
 	        };
 	    backToTop();
 	    $(window).on('scroll', function () {
 	        backToTop();
 	    });
-	    $('#back-to-top').on('click', function (e) {
+	    $('#backToTop').on('click', function (e) {
 	        e.preventDefault();
 	        $('html,body').animate({
 	            scrollTop: 0
 	        }, 700);
 	    });
 	}
-
-
-
 
 });
