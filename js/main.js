@@ -28,7 +28,7 @@ $(document).ready(function() {
 	})(jQuery);
 
 	var win = $(window);
-	var allMods = $("#about h1, #about p, #gallery h1, #gallery p, #myImg, #contact h1, #contact p");
+	var allMods = $("#about h1, #about p, #about h2, #about ul, #about center, #gallery h1, #gallery p, #myImg, #contact h1, #contact p");
 
 	allMods.each(function(i, el) {
 	  var el = $(el);
