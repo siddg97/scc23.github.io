@@ -47,7 +47,7 @@ html, body {
 
 	display: inline-block;
 	/*position: relative;*/
-	padding-bottom: 10px;
+	/*padding-bottom: 10px;*/
 }
 #nav a:hover {
 	opacity: 0.5;
@@ -356,10 +356,21 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	body {
-		/*background-color: white;*/
+@media only screen and (max-width: 830px) {
+	#nav {
+		margin-top: 0px;
+		margin-left: 10vw;
+		margin-right: 10vw;
+		display: inline;
+		float: left;
 	}
+	#nav a {
+		padding-top: 62px;
+		padding-left: 0px;
+	}
+}
+
+@media only screen and (max-width: 790px) {
 	#nav {
 		/*border: 1px solid black;*/
 		margin-top: 0px;
