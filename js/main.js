@@ -166,7 +166,7 @@ $(document).ready(function() {
 
 
 	// automatic smooth scrolling when pressing navigation links
-	$(document).on('click', 'a', function(event){
+	$(document).on('click', '#nav a', function(event){
 	    event.preventDefault();
 
 	    $('html, body').animate({
