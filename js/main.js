@@ -3,54 +3,76 @@ $(document).ready(function() {
 	$('body').hide();
 	$('body').fadeIn(1000);
 
-	(function($) {
-	  /**
-	   * Copyright 2012, Digital Fusion
-	   * Licensed under the MIT license.
-	   * http://teamdf.com/jquery-plugins/license/
-	   *
-	   * @author Sam Sehnert
-	   * @desc A small plugin that checks whether elements are within
-	   *     the user visible viewport of a web browser.
-	   *     only accounts for vertical position, not horizontal.
-	   */
-	  $.fn.visible = function(partial) {
-	      var $t            = $(this),
-	          $w            = $(window),
-	          viewTop       = $w.scrollTop(),
-	          viewBottom    = viewTop + $w.height(),
-	          _top          = $t.offset().top,
-	          _bottom       = _top + $t.height(),
-	          compareTop    = partial === true ? _bottom : _top,
-	          compareBottom = partial === true ? _top : _bottom;
-	    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-	  };
-	})(jQuery);
+	// (function($) {
+	//   /**
+	//    * Copyright 2012, Digital Fusion
+	//    * Licensed under the MIT license.
+	//    * http://teamdf.com/jquery-plugins/license/
+	//    *
+	//    * @author Sam Sehnert
+	//    * @desc A small plugin that checks whether elements are within
+	//    *     the user visible viewport of a web browser.
+	//    *     only accounts for vertical position, not horizontal.
+	//    */
+	//   $.fn.visible = function(partial) {
+	//       var $t            = $(this),
+	//           $w            = $(window),
+	//           viewTop       = $w.scrollTop(),
+	//           viewBottom    = viewTop + $w.height(),
+	//           _top          = $t.offset().top,
+	//           _bottom       = _top + $t.height(),
+	//           compareTop    = partial === true ? _bottom : _top,
+	//           compareBottom = partial === true ? _top : _bottom;
+	//     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+	//   };
+	// })(jQuery);
 
-	var win = $(window);
-	var allMods = $("#about h1, #about p, #about h2, #about ul, .column, #about center, #about h3, #gallery h1, #gallery p, #myImg1, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #contact h1, #contact p");
+	// var win = $(window);
+	// var allMods = $("#about h1, #about p, #about h2, #about ul, .column, #about center, #about h3, #gallery h1, #gallery p, #myImg1, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #contact h1, #contact p");
 
-	allMods.each(function(i, el) {
-	  var el = $(el);
-	  if (el.visible(true)) {
-	    el.addClass("already-visible"); 
-	  } 
-	});
-
-
-	win.scroll(function(event) {
-	  allMods.each(function(i, el) {
-	    var el = $(el);
-	    if (el.visible(true)) {
-	      el.addClass("come-in"); 
-	    } 
-	  });
-	});
+	// allMods.each(function(i, el) {
+	//   var el = $(el);
+	//   if (el.visible(true)) {
+	//     el.addClass("already-visible"); 
+	//   } 
+	// });
 
 
+	// win.scroll(function(event) {
+	//   allMods.each(function(i, el) {
+	//     var el = $(el);
+	//     if (el.visible(true)) {
+	//       el.addClass("come-in"); 
+	//     } 
+	//   });
+	// });
 
 
-
+	window.sr = ScrollReveal({ duration: 600 });	// fades in when you scroll but doesn't fade out
+	// window.sr = ScrollReveal({ reset: true });	// fades in/out when you scroll
+	sr.reveal('#about h1');
+	sr.reveal('#about p');
+	sr.reveal('#about h2');
+	sr.reveal('#about ul');
+	sr.reveal('.column');
+	sr.reveal('#about center');
+	sr.reveal('#about h3');
+	sr.reveal('#gallery h1');
+	sr.reveal('#gallery p');
+	sr.reveal('#myImg1');
+	sr.reveal('#myImg2');
+	sr.reveal('#myImg3');
+	sr.reveal('#myImg4');
+	sr.reveal('#myImg5');
+	sr.reveal('#myImg6');
+	sr.reveal('#myImg7');
+	sr.reveal('#myImg8');
+	sr.reveal('#myImg9');
+	sr.reveal('#myImg10');
+	sr.reveal('#myImg11');
+	sr.reveal('#myImg12');
+	sr.reveal('#contact h1');
+	sr.reveal('#contact p');
 
 
 
