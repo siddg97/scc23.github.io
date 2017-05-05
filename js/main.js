@@ -79,7 +79,6 @@ $(document).ready(function() {
 
 
 
-
 	// Get the modal
 	var modal1 = document.getElementById('myModal1');
 	// Get the image and insert it inside the modal

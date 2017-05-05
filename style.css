@@ -161,18 +161,24 @@ img#icon {
 }
 #languages {
 	float: left;
-	width: 40%
+	/*width: 40%;*/
+	width: 42%;
 }
 #applications {
-	float: left;
-	width: 40%;
+	/*float: left;*/
+	/*width: 40%;*/
+	display: inline-block;
+	width: 20%;
 }
 #concepts {
-	float: left;
-	width: 19%;
+	/*float: left;*/
+	/*width: 19%;*/
+	float: right;
+	width: 18%;
 }
 #resume {
-	margin-top: 570px;
+	/*margin-top: 570px;*/
+	margin-top: 150px;
 }
 
 #about h3 {
