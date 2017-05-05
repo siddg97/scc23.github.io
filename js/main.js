@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$('body').hide();
 	$('body').fadeIn(1000);
 
+	// slide up content when scrolling
 	// (function($) {
 	//   /**
 	//    * Copyright 2012, Digital Fusion
@@ -48,6 +49,7 @@ $(document).ready(function() {
 	// });
 
 
+	// fade in content when scrolling
 	window.sr = ScrollReveal({ duration: 600 });	// fades in when you scroll but doesn't fade out
 	// window.sr = ScrollReveal({ reset: true });	// fades in/out when you scroll
 	sr.reveal('#about h1');
