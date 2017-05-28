@@ -191,7 +191,7 @@ h2 {
 
 #resume {
     /*margin-top: 570px;*/
-    /*margin-top: 150px;*/
+    margin-top: 150px;
 }
 
 #about h3 {
@@ -492,7 +492,7 @@ footer {
         height: 150px;
     }
     #resume {
-        margin-top: 600px;
+        /*margin-top: 600px;*/
     }
     .modal-content1,
     .modal-content2,
