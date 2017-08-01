@@ -53,10 +53,6 @@ li {
     line-height: 25px;
 }
 
-span {
-    float: right;
-}
-
 
 /* ------------------------------------------------------------------- */
 
@@ -252,7 +248,7 @@ span {
 
 #skills {
     padding-top: 55px;
-    padding-bottom: 500px;
+    padding-bottom: 400px;
     background-color: #efefef;
 }
 
@@ -554,14 +550,6 @@ footer {
     }
     /* Show menu icon for navigation */
     .navbar img {
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 950px) {
-    /* Place dates under titles */
-    span {
-        float: none;
         display: block;
     }
 }

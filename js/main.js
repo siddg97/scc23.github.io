@@ -119,23 +119,52 @@ if ($("#backToTop").length) {
 }
 
 // Hide/show navigation menu
+// $(function() {
+//     // Initialize variable for visibility to false
+//     var menuVisible = false;
+//     // Click on menu button to show navigation links
+//     $("#menuBtn img").click(function() {
+//         if (menuVisible) {
+//             $("#myMenu").css({ "display": "none" });
+//             menuVisible = false;
+//             return;
+//         }
+//         // Otherwise, show navigation links
+//         $("#myMenu").css({ "display": "block" });
+//         menuVisible = true;
+//     });
+//     // Click again to hide navigation links
+//     $("#myMenu").click(function() {
+//         $(this).css({ "display": "none" });
+//         menuVisible = false;
+//     });
+// });
+
+// Hide/show navigation menu (slide up/down)
 $(function() {
-    // Initialize variable for visibility to false
     var menuVisible = false;
-    // Click on menu button to show navigation links
+
+    // When user clicks on menu
     $("#menuBtn img").click(function() {
-        if (menuVisible) {
-            $("#myMenu").css({ "display": "none" });
-            menuVisible = false;
-            return;
+        // Slide down when menu is not visible
+        if (!menuVisible) {
+            $("#myMenu").slideDown();
+            menuVisible = true;
         }
-        // Otherwise, show navigation links
-        $("#myMenu").css({ "display": "block" });
-        menuVisible = true;
+        // Slide up when menu is visible
+        else {
+            $("#myMenu").slideUp();
+            menuVisible = false;
+        }
     });
-    // Click again to hide navigation links
-    $("#myMenu").click(function() {
-        $(this).css({ "display": "none" });
-        menuVisible = false;
+
+    // Slide up when user clicks a link and anywhere else on screen
+    $("body").click(function() {
+        $("#myMenu").slideUp();
+            menuVisible = false;
+    });
+    // Prevents the menu from sliding down and up right away when clicked once
+    $('#menuBtn').click(function(event){
+        event.stopPropagation();
     });
 });
