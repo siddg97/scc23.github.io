@@ -1,363 +1,489 @@
+<!--===================================================================
+Project Title: Personal Website
+
+File Name: index.html
+
+Author: Sherman Chow
+Date: 2017/07/26
+
+Last Modification: 2017/07/31
+===================================================================-->
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <title>Sherman Chow</title>
+    <title>My Profile | Sherman Chow</title>
 </head>
 
 <body>
-    <div id="topCover">
-        <div id="profileHead">
-            <h1><b>My Profile</b></h1>
-        </div>
-        <div id="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
+    <!--div for easy navigation-->
     <div id="start">
-        <div id="profile">
-            <p>
-                <img class=profilePic src="images/sherman_photo.jpg" alt="My photo">
-                <h2>Sherman Chow</h2>
-                Software Engineer Co-op
-                <br/><br/>
-                <a id="icon" href="https://www.facebook.com/shermanc62">
-                    <img id="icon" src="images/fb.png" />
-                </a>
-                <a id="icon" href="https://www.linkedin.com/in/sherman-chow-6b1b22127/">
-                    <img id="icon" src="images/linkedin.png" />
-                </a>
-                <a id="icon" href="https://github.com/scc23">
-                    <img id="icon" src="images/github.png" />
-                </a>
-                <a id="icon" href="https://www.instagram.com/shermancwchow/?hl=en">
-                    <img id="icon" src="images/instagram.png" />
-                </a>
-            </p>
+        <div class="navbar">
+            <!--Standard navigation bar-->
+            <ul class="nav">
+                <li><a href="#start">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#technicalProjects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!--Drop down navigation menu when window size is small-->
+            <!--Menu button-->
+            <div id="menuBtn">
+                <img src="images/icons/menu.png" alt="Menu" />
+            </div>
+            <!--Dropdown navigation links; hide them at initial state-->
+            <nav id="myMenu" style="display: none;">
+                <ul>
+                    <li><a href="#start">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#technicalProjects">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <div id="welcome">
-            <p>Hello,<br/>Welcome!</p>
+    </div>
+    <div class="slider" id="main-slider">
+        <!-- Outermost container element -->
+        <div class="slider-wrapper">
+            <!-- Innermost wrapper element -->
+            <img src="images/slideshow/1.jpg" alt="First" class="slide" />
+            <!-- Slides -->
+            <img src="images/slideshow/2.jpg" alt="Second" class="slide" />
+            <img src="images/slideshow/3.jpg" alt="Third" class="slide" />
+            <img src="images/slideshow/4.jpg" alt="Fourth" class="slide" />
         </div>
     </div>
 
-    <br/><br/>
+    <div class="name">
+        <!--Set default line height for name-->
+        <p style="line-height: 100%;">Sherman Chow</p>
+        <hr style="margin-top: -40px;" size="2">
+        <!--switchText class for fading in/out text every few seconds-->
+        <p class="switchText" style="font-size: 22px; opacity: 0.85">Computer Science Student</p>
+    </div>
+
+    <!--About Me Section-->
     <div id="about">
-        <h1 style="color: #8aa4ce;">About Me</h1>
-        <br/>
-        <p>
-            Hi, I'm Sherman. I am currently a software engineer intern at Sierra Wireless Inc. and a computing science student at Simon Fraser University. I also spent a year and a half studying computing science at Zhejiang University in Hangzhou, China. In my free
-            time, I enjoy programming, playing video games, playing the piano and violin, and taking photos.
-            <br/><br/><br/><br/>
-            <h2 style="letter-spacing: 2px;">Technical Skills</h2>
-            <div id="skills">
-                <div id="languages">
-                    <h3 style="letter-spacing: 2px;"><b>Languages</b></h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>MATLAB</li>
-                        <li>Julia</li>
-                        <li>Assembly Language (x86)</li>
-                    </ul>
-                </div>
-                <div id="applications">
-                    <h3 style="letter-spacing: 2px;"><b>Applications</b></h3>
-                    <ul>
-                        <li>Eclipse</li>
-                        <li>Xcode</li>
-                        <li>Microsoft Visual Studio</li>
-                        <li>Sublime Text</li>
-                        <li>Subversion</li>
-                        <li>Fossil</li>
-                        <li>Git</li>
-                        <li>Microsoft Office</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe After Effects</li>
-                    </ul>
-                </div>
-                <div id="concepts">
-                    <h3 style="letter-spacing: 2px;"><b>Concepts</b></h3>
-                    <ul>
-                        <li>Abstract Data Types</li>
-                        <li>Sorting Methods</li>
-                        <li>Object-Oriented <br/>Programming</li>
-                        <li>Agile Development</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- <div id="stuff">
-				<div class="column">
-					<h3>Languages</h3>
-					<ul>
-						<li>Python</li>
-						<li>Java</li>
-						<li>C</li>
-						<li>C++</li>
-						<li>HTML</li>
-						<li>CSS</li>
-						<li>JavaScript</li>
-						<li>MATLAB</li>
-						<li>Julia</li>
-						<li>Swift</li>
-						<li>Assembly Language (x86)</li>
-					</ul>
-				</div>
-
-				<div class="column">
-					<h3>Applications</h3>
-					<ul>
-						<li>Eclipse</li>
-						<li>Xcode</li>
-						<li>Microsoft Visual Studio</li>
-						<li>Sublime Text</li>
-						<li>Subversion</li>
-						<li>Fossil</li>
-						<li>Git</li>
-						<li>Microsoft Office</li>
-						<li>Adobe Photoshop</li>
-						<li>Adobe After Effects</li>
-					</ul>
-				</div>
-
-				<div class="column">
-					<h3>Concepts</h3>
-					<ul>
-						<li>Abstract Data Types</li>
-						<li>Sorting Methods</li>
-						<li>Object-Oriented <br/>Programming</li>
-						<li>Agile Development</li>
-					</ul>
-				</div>
-				</div> -->
-
-            <!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> -->
-
-
-            <!--Education-->
-            <br/><br/><br/><br/><br/>
-            <h2 style="letter-spacing: 2px;">Education</h2>
-            <br/>
-            <p style="text-align: left;">
-                <b>Bachelor of Applied Science - Major in Computing Science</b>
-                <span style="float:right;"><b>2013–Present</b></span>
-                <br/>
-		<i>Simon Fraser University</i> | <i>Burnaby, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspStudied one year abroad at Zhejiang University in Hangzhou, China (Sept 2014–June 2015)
-		<br/> •&nbsp&nbsp&nbsp&nbspDean’s Honour Roll, achieved a 3.50 or higher GPA (Spring 2016)
+        <h1>About Me</h1>
+        <div style="margin-left: 12vw; margin-right: 12vw;">
+            <img id="myPhoto" src="images/profile/batman.jpg" alt="My photo">
+            <p>
+                <br/> Welcome!
+                <br/><br/>My name is Sherman Chow and I'm a computer science student at SFU from Vancouver, Canada.
+                <br/><br/> In my free time, I enjoy programming, video gaming, playing the piano and violin, and taking photos.
+                <br/><br/> To learn more about me, click on my resume.
+                <br/><br/>
+                <!-- Resume -->
+                <a id="icon" href="files/shermanchow_resume.pdf">
+                    <img id="icon" src="images/icons/resume.png" />
+                </a>
+                <a id="resume" href="files/shermanchow_resume.pdf">Resume</a>
             </p>
-
-            <!--Work Experience-->
-            <br/><br/><br/><br/><br/>
-            <h2 style="letter-spacing: 2px;">Work Experience</h2>
-            <br/>
-            <p style="text-align: left;">
-                <b>Software Engineer Co-op</b>
-                <span style="float: right;"><b>Jan 2017–Present</b></span>
-                <br/>
-                <i>Sierra Wireless Inc.</i> | <i>Richmond, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspDevelop software, analyze defects, and verify bug fixes for our <i>AirPrime</i> modules, with a team of 12 people
-                <br/> •&nbsp&nbsp&nbsp&nbspDevelop APIs in C++ using TLV encoding to add new support for our products
-                <br/> •&nbsp&nbsp&nbsp&nbspInvestigate new features using Microsoft Azure and mobile device management solutions to develop new capabilties for our products
-            </p>
-
-            <!--Technical Projects-->
-            <br/><br/><br/><br/><br/>
-            <h2 style="letter-spacing: 2px;">Technical Projects</h2>
-            <br/>
-            <p style="text-align: left;">
-                <b>Shogi Japanese Chess Game</b>
-                <span style="float: right;"><b>Sept–Dec 2016</b></span>
-                <br/><i>Introduction to Software Engineering (CMPT 276) - Simon Fraser University</i>&nbsp&nbsp|&nbsp&nbsp<i>Burnaby, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspCollaborated with a team of 5 students to develop a chess game in Julia language with artifical intelligence, a graphical user interface, and networking capabilities
-                <br/> •&nbsp&nbsp&nbsp&nbspDeveloped multiple AI difficulties using the minimax search with alpha-beta pruning and Monte Carlo tree search algorithms
-                <br/> •&nbsp&nbsp&nbsp&nbspIntegrated components and fixed bugs to ensure a runnable software on multiple operating systems, and a high quality final product
-            </p>
-            <br/>
-            <p style="text-align: left;">
-                <b>English-Klingon Translator</b>
-                <span style="float: right;"><b>May–June 2016</b></span>
-                <br/><i>Data Structures & Programming (CMPT 225) - Simon Fraser University</i>&nbsp&nbsp|&nbsp&nbsp<i>Burnaby, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspDesigned an English-Klingon (language of fictional characters in Star Trek) translator in C++ using a binary search tree and a hash table to translate words
-                <br/> •&nbsp&nbsp&nbsp&nbspCreated a binary search tree by using a doubly linked list to implement its functions in order to insert and display all words in the translation library in sorted order efficiently
-                <br/> •&nbsp&nbsp&nbsp&nbspCreated a hash table by using chain hashing to avoid collision and a singly linked list to implement its functions in order to translate individual words from the command line
-            </p>
-            <br/>
-            <p style="text-align: left;">
-                <b>Bank Simulation Application</b>
-                <span style="float: right;"><b>May–June 2016</b></span>
-                <br/><i>Data Structures & Programming (CMPT 225) - Simon Fraser University</i>&nbsp&nbsp|&nbsp&nbsp<i>Burnaby, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspDeveloped an event driven simulation of a bank in C++ using a circular queue and priority queue to manage and process customers efficiently in priority order
-                <br/> •&nbsp&nbsp&nbsp&nbspCreated a priority queue by using a singly linked list to implement its functions in order to insert and remove customers from the priority queue
-            </p>
-            <br/>
-            <p style="text-align: left;">
-                <b>FiendsBook Application</b>
-                <span style="float: right;"><b>May–June 2016</b></span>
-                <br/><i>Data Structures & Programming (CMPT 225) - Simon Fraser University</i>&nbsp&nbsp|&nbsp&nbsp<i>Burnaby, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspDeveloped a social network application, FriendsBook, in C++ that stores user information in a dynamic array with function methods that allow users to add, remove, or search for friends, and to change their image
-                or status
-            </p>
-            <br/>
-            <p style="text-align: left;">
-                <b>Adventure Game</b>
-                <span style="float: right;"><b>Sept–Dec 2013</b></span>
-                <br/><i>Intro to Computing Science & Programming (CMPT 120) - Simon Fraser University</i>&nbsp&nbsp|&nbsp&nbsp<i>Burnaby, BC</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspWorked with a team of three students to brainstorm ideas and develop an adventure game in Python that allows a single player to interact with the system
-                <br/> •&nbsp&nbsp&nbsp&nbspCreated images using turtle graphics to display to the player
-                <br/> •&nbsp&nbsp&nbsp&nbspDeveloped several test plans to account for a wide variety of potential errors and ensure that the final program was capable of exception handling
-            </p>
-        </p>
-	<!-- Personal Projects -->
-	<br/><br/><br/><br/><br/>
-	<h2 style="letter-spacing: 2px;">Personal Projects</h2>
-	<br/>
-	<p style="text-align: left;">
-                <b>Personal Webpage</b>
-                <span style="float: right;"><b>Mar 2017</b></span>
-                <br/><i>Personal Project</i> | <i>scc23.github.io</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspDeveloped a webpage with a personal biography and photo gallery using HTML, CSS, and JavaScript
-            </p>
-            <br/>
-            <p style="text-align: left;">
-                <b>Tic-Tac-Toe Game</b>
-                <span style="float: right;"><b>Jan 2017</b></span>
-                <br/><i>Personal Project</i>
-                <br/> •&nbsp&nbsp&nbsp&nbspDeveloped a Tic-Tac-Toe game in Python with a graphical user interface and artifical intelligence using the minimax search algorithm
-            </p>
-	
-        <p id="resume">
-            <center>
-                <!-- resume pdf opens in new tab -->
-                <a href="files/shermanchow_resume.pdf" target="_blank">Click here to view my resume</a>
-            </center>
-        </p>
+        </div>
     </div>
 
+    <!--Skills Section-->
+    <div id="skills">
+        <h1>Skills</h1>
+        <br/>
+        <div style="margin-left: 12vw; margin-right: 12vw;">
+            <div id="skillsInfo">
+                <p>
+                    <b style="font-size: 18px;">Programming Languages</b>
+                    <br/>
+                    <div style="float: left;">C++</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/fullStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">C</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Python</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Julia</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">MATLAB</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">HTML/CSS</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">JavaScript</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Assembly Language (x86)</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                </p>
+            </div>
+            <div id="skillsInfo">
+                <p>
+                    <b style="font-size: 18px;">Software Tools</b>
+                    <br/>
+                    <div style="float: left;">Linux</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/fullStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Bash</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Microsoft Visual Studio</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/fullStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Eclipse</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Xcode</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Git</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/fullStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Subversion</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar"
+                            src="images/icons/fullStar.png" />
+                    </div>
+                    <br/>
+                    <div style="float: left;">Fossil</div>
+                    <div style="text-align: right;">
+                        <img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/fullStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar" src="images/icons/emptyStar.png" /><img id="iconStar"
+                            src="images/icons/emptyStar.png" />
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <!--Work Experience Section-->
+    <div id="experience">
+        <h1>Experience</h1>
+        <br/>
+        <div style="margin-left: 12vw; margin-right: 12vw;">
+            <div id="first">
+                <p>
+                    <!-- <b>Sierra Wireless Inc.</b> -->
+                    <b>Internship</b>
+                    <br/><img id="iconLoc" src="images/icons/work.png" />Sierra Wireless Inc.
+                    <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2017 - Aug 2017
+                    <br/><img id="iconLoc" src="images/icons/location.png" />Richmond, BC
+                </p>
+            </div>
+            <div id="second">
+                <p>
+                    <b>Software Engineer Intern</b>
+                    <br/>I developed software, analyzed defects, and verified bug fixes for <i>AirPrime</i> modules, with a team of 12 people. I also developed APIs in C++ using TLV encoding to add new support for our products. I investigated new features
+                    using Microsoft Azure and mobile device management solutions to develop new capabilities for our products.
+                </p>
+            </div>
+        </div>
+    </div>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <!--Education Section-->
+    <div id="education">
+        <h1>Education</h1>
+        <br/>
+        <div style="margin-left: 12vw; margin-right: 12vw;">
+            <div id="first">
+                <p>
+                    <b>Simon Fraser University</b>
+                    <br/><img id="iconLoc" src="images/icons/clock.png" />Sept 2013 - Present
+                    <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                </p>
+            </div>
+            <div id="second">
+                <p>
+                    <b>Bachelor of Applied Science - Major in Computing Science</b>
+                    <br/>I received the Dean's Honour Roll (Spring 2016) by achieving a 3.50 or higher GPA. I also studied one year abroad at Zhejiang University in Hangzhou, China (Sept 2014 - June 2015).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Projects Section-->
+    <div id="projects">
+        <!--Technical Projects Section-->
+        <div id="technicalProjects">
+            <h1>Technical Projects</h1>
+            <br/>
+            <div style="margin-left: 12vw; margin-right: 12vw;">
+                <div id="first">
+                    <p>
+                        <b>Shogi Japanese Chess Game</b>
+                        <br/><img id="iconLoc" src="images/icons/school.png" />Simon Fraser University
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Sept 2016 - Dec 2016
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Introduction to Software Engineering - CMPT 276</b>
+                        <br/>I collaborated with a team of 5 students to develop a chess game in Julia language with artificial intelligence, a GUI, and networking capabilities.
+                    </p>
+                </div>
+                <br/>
+                <div id="first">
+                    <p>
+                        <b>English-Klingon Translator</b>
+                        <br/><img id="iconLoc" src="images/icons/school.png" />Simon Fraser University
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />May 2016 - June 2016
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Data Structures & Programming - CMPT 225</b>
+                        <br/>I designed an English-Klingon (language of fictional characters in Star Trek) translator in C++ using a binary search tree and a hash table to translate words. I created a binary search tree by using a doubly linked list to
+                        implement its functions in order to insert and display all words in the translation library in sorted order efficiently. I created a hash table by using chain hashing to avoid collision and a singly linked list to implement its
+                        functions in order to translate individual words from the command line
+                    </p>
+                </div>
+                <br/>
+                <div id="first">
+                    <p>
+                        <b>Bank Simulation Application</b>
+                        <br/><img id="iconLoc" src="images/icons/school.png" />Simon Fraser University
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />May 2016 - June 2016
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Data Structures & Programming - CMPT 225</b>
+                        <br/>I developed an event driven simulation of a bank in C++ using a circular queue and priority queue to manage and process customers efficiently in priority order. I created a priority queue by using a singly linked list to implement
+                        its functions in order to insert and remove customers from the priority queue.
+                    </p>
+                </div>
+                <br/>
+                <div id="first">
+                    <p>
+                        <b>FriendsBook Application</b>
+                        <br/><img id="iconLoc" src="images/icons/school.png" />Simon Fraser University
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />May 2016 - June 2016
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Data Structures & Programming - CMPT 225</b>
+                        <br/>I developed a social network application, FriendsBook, in C++ that stores user information in a dynamic array with function methods that allow users to add, remove, or search for friends, and to change their image or status.
+                    </p>
+                </div>
+                <br/>
+                <div id="first">
+                    <p>
+                        <b>Adventure Game</b>
+                        <br/><img id="iconLoc" src="images/icons/school.png" />Simon Fraser University
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Sept 2013 - Dec 2013
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Intro to Computing Science & Programming - CMPT 120</b>
+                        <br/>I worked with a team of three students to brainstorm ideas and develop an adventure game in Python that allows a single player to interact with the system. I created images using turtle graphics to display to the player. I
+                        developed several test plans to account for a wide variety of potential errors and ensure that the final program was capable of exception handling.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Personal Projects Section-->
+        <div id="personalProjects">
+            <h1>Personal Projects</h1>
+            <br/>
+            <div style="margin-left: 12vw; margin-right: 12vw;">
+                <div id="first">
+                    <p>
+                        <b>Personal Webpage</b>
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Mar 2017 - Aug 2017
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>scc23.github.io</b>
+                        <br/>I developed a webpage with a personal biography and photo gallery using HTML, CSS, and JavaScript.
+                    </p>
+                </div>
+                <br/>
+                <div id="first">
+                    <p>
+                        <b>Personal Project</b>
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2017
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Tic-Tac-Toe Game</b>
+                        <br/>I developed a Tic-Tac-Toe game in Python with a graphical user interface and artifical intelligence using the minimax search algorithm.
+                    </p>
+                </div>
+                <br/><br/>
+            </div>
+        </div>
+    </div>
+
+    <!--Gallery Section-->
     <div id="gallery">
-        <h1 style="color: #8aa4ce;">Gallery</h1>
-        <br/>
-        <p style="text-align: center;">
-            <img id="myImg1" src="gallery/sherman_photo.jpg" />
-            <img id="myImg2" src="gallery/trees.jpg" />
-            <img id="myImg3" src="gallery/hawaii.jpg" />
-            <img id="myImg4" src="gallery/snowboard.jpg" />
-            <img id="myImg5" src="gallery/whistler.jpg" />
-            <img id="myImg6" src="gallery/airplane.jpg" />
-            <img id="myImg7" src="gallery/ferriswheel.jpg" />
-            <img id="myImg8" src="gallery/flowers.jpg" />
-            <img id="myImg9" src="gallery/chess.jpg" />
-            <img id="myImg10" src="gallery/seafood.jpg" />
-            <img id="myImg11" src="gallery/pandas.jpg" />
-            <img id="myImg12" src="gallery/shanghai.jpg" />
-
-            <!-- The Modals -->
-            <div id="myModal1" class="modal1">
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content1" id="img1">
-            </div>
-            <div id="myModal2" class="modal2">
-                <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
-                <img class="modal-content2" id="img2">
-            </div>
-            <div id="myModal3" class="modal3">
-                <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
-                <img class="modal-content3" id="img3">
-            </div>
-            <div id="myModal4" class="modal4">
-                <span class="close" onclick="document.getElementById('myModal4').style.display='none'">&times;</span>
-                <img class="modal-content4" id="img4">
-            </div>
-            <div id="myModal5" class="modal5">
-                <span class="close" onclick="document.getElementById('myModal5').style.display='none'">&times;</span>
-                <img class="modal-content5" id="img5">
-            </div>
-            <div id="myModal6" class="modal6">
-                <span class="close" onclick="document.getElementById('myModal6').style.display='none'">&times;</span>
-                <img class="modal-content6" id="img6">
-            </div>
-            <div id="myModal7" class="modal7">
-                <span class="close" onclick="document.getElementById('myModal7').style.display='none'">&times;</span>
-                <img class="modal-content7" id="img7">
-            </div>
-            <div id="myModal8" class="modal8">
-                <span class="close" onclick="document.getElementById('myModal8').style.display='none'">&times;</span>
-                <img class="modal-content8" id="img8">
-            </div>
-            <div id="myModal9" class="modal9">
-                <span class="close" onclick="document.getElementById('myModal9').style.display='none'">&times;</span>
-                <img class="modal-content9" id="img9">
-            </div>
-            <div id="myModal10" class="modal10">
-                <span class="close" onclick="document.getElementById('myModal10').style.display='none'">&times;</span>
-                <img class="modal-content10" id="img10">
-            </div>
-            <div id="myModal11" class="modal11">
-                <span class="close" onclick="document.getElementById('myModal11').style.display='none'">&times;</span>
-                <img class="modal-content11" id="img11">
-            </div>
-            <div id="myModal12" class="modal12">
-                <span class="close" onclick="document.getElementById('myModal12').style.display='none'">&times;</span>
-                <img class="modal-content12" id="img12">
-            </div>
-
-
-        </p>
-    </div>
-
-
-
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <div id="contact">
-        <h1 style="color: #8aa4ce;">Contact Info</h1>
-        <br/>
-        <p>
-            Phone: (778) 707-0895
-            <!--<br/><br/> E-mail: schow95@gmail.com-->
-            <br/><br/> E-mail: scc23@sfu.ca
-        </p>
-    </div>
-
-
-    <br/><br/><br/><br/>
-
-    <footer>
-        <center>
-            <hr size="1.5">
-            <br/>
-            <script type="text/javascript">
-                document.write('&#169; ' + new Date().getFullYear() + ' My Profile All Rights Reserved | Design by Sherman Chow');
-            </script>
-        </center>
-    </footer>
-
-    <br/><br/>
-
-    <div id="backToTop">
-        <center>
-            <a href="#">
-                <img src="images/upArrow.png" />
+        <h1>Gallery</h1>
+        <br/><br/>
+        <div id="galleryPhotos">
+            <a href="images/gallery/airplane.jpg">
+                <img src="images/gallery/airplane.jpg" />
             </a>
-        </center>
+            <a href="images/gallery/trees.jpg">
+                <img src="images/gallery/trees.jpg" />
+            </a>
+            <a href="images/gallery/ferriswheel.jpg">
+                <img src="images/gallery/ferriswheel.jpg" />
+            </a>
+            <a href="images/gallery/snowboard.jpg">
+                <img src="images/gallery/snowboard.jpg" />
+            </a>
+            <a href="images/gallery/whistler.jpg">
+                <img src="images/gallery/whistler.jpg" />
+            </a>
+            <a href="images/gallery/chess.jpg">
+                <img src="images/gallery/chess.jpg" />
+            </a>
+            <a href="images/gallery/flowers.jpg">
+                <img src="images/gallery/flowers.jpg" />
+            </a>
+            <a href="images/gallery/shanghai.jpg">
+                <img src="images/gallery/shanghai.jpg" />
+            </a>
+            <a href="images/gallery/pattern.jpg">
+                <img src="images/gallery/pattern.jpg" />
+            </a>
+        </div>
+    </div>
+
+    <!--End Section to keep the contact info and remaining page the same background colour-->
+    <div id="end">
+        <!--Contact Info Section-->
+        <div id="contact">
+            <h1>Contact Info</h1>
+            <br/>
+            <div id="contactInfo">
+                <!--Left column-->
+                <p id="left">
+                    <!-- Email -->
+                    <a id="icon" href="mailto:scc23@sfu.ca">
+                        <img id="icon" src="images/icons/email.png" />
+                    </a>
+                    <a href="mailto:scc23@sfu.ca">scc23@sfu.ca</a>
+                    <br/><br/>
+                    <!-- Facebook -->
+                    <a id="icon" href="https://www.facebook.com/shermanc62">
+                        <img id="icon" src="images/icons/facebook.png" />
+                    </a>
+                    <a href="https://www.facebook.com/shermanc62">Facebook</a>
+                </p>
+                <!--Right column-->
+                <p id="right">
+                    <!-- LinkedIn -->
+                    <a id="icon" href="https://www.linkedin.com/in/sherman-chow-6b1b22127/">
+                        <img id="icon" src="images/icons/linkedin.png" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/sherman-chow-6b1b22127/">LinkedIn</a>
+                    <br/><br/>
+                    <!-- Github -->
+                    <a id="icon" href="https://github.com/scc23">
+                        <img id="icon" src="images/icons/github.png" />
+                    </a>
+                    <a href="https://github.com/scc23">GitHub</a>
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <center>
+                <hr size="1.5">
+                <br/>
+                <script type="text/javascript">
+                    document.write('Copyright &#169; ' + new Date().getFullYear() + ' My Profile. All Rights Reserved | Design by Sherman Chow');
+                </script>
+                <br/>
+                <div style="font-size: 12px;">
+                    <br/>
+                    <!--Credits-->
+                    <!--<div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/alfredo-hernandez" title="Alfredo Hernandez">Alfredo Hernandez</a> from <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a style="color: inherit; text-decoration: none;" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
+                    <div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a style="color: inherit; text-decoration: none;" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
+                    <div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a style="color: inherit; text-decoration: none;" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
+                    <div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a style="color: inherit; text-decoration: none;" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a  style="color: inherit; text-decoration: none;"href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a  style="color: inherit; text-decoration: none;"href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/lyolya" title="Lyolya">Lyolya</a> from <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a  style="color: inherit; text-decoration: none;"href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+                    <div>Icons made by <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/alfredo-hernandez" title="Alfredo Hernandez">Alfredo Hernandez</a>,
+                        <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/lyolya" title="Lyolya">Lyolya</a>,
+                        <a style="color: inherit; text-decoration: none;" href="http://www.freepik.com" title="Freepik">Freepik</a>,
+                        <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
+                        <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a>,
+                        <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>, and
+                        <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a>, from <a style="color: inherit; text-decoration: none;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>                        is licensed by <a style="color: inherit; text-decoration: none;" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                </div>
+            </center>
+        </footer>
+
+        <br/><br/>
+
+        <!--Arrow to jump back to top of page-->
+        <div id="backToTop">
+            <center>
+                <a href="#start">
+                    <img src="images/icons/upArrow.png" />
+                </a>
+            </center>
+        </div>
     </div>
 
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
