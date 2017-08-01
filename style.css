@@ -202,8 +202,8 @@ span {
     /*border: 1px solid black;*/
     padding-top: 55px;
     padding-bottom: 80px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #about h1 {
@@ -213,9 +213,9 @@ span {
 #myPhoto {
     margin-left: 30px;
     margin-right: 50px;
-    padding-top: 32px;
+    padding-top: 27px;
     float: left;
-    width: 250px;
+    height: 310px;
 }
 
 #about a {
@@ -510,9 +510,9 @@ footer {
         padding-bottom: 7px;
     }
     /* Make my photo smaller to fit in the center of the page */
-    #myPhoto {
+    /* #myPhoto {
         width: 200px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 490px) {
@@ -533,7 +533,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 1180px) {
     /* Place my photo in the center */
     #myPhoto {
         float: none;
