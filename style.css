@@ -352,6 +352,7 @@ span {
 
 #gallery {
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #gallery h1 {
@@ -362,7 +363,6 @@ span {
     margin-left: 2.5%;
     margin-right: 2.5%;
     text-align: center;
-    padding-bottom: 60px;
 }
 
 #galleryPhotos img {
