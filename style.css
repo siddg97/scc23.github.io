@@ -6,7 +6,7 @@ File Name: style.css
 Author: Sherman Chow
 Date: 2017/07/26
 
-Last Modification: 2017/07/31
+Last Modification: 2017/08/11
 ===================================================================*/
 
 
@@ -248,7 +248,7 @@ li {
 
 #skills {
     padding-top: 55px;
-    padding-bottom: 400px;
+    padding-bottom: 350px;
     background-color: #efefef;
 }
 
@@ -581,7 +581,7 @@ footer {
 
 @media only screen and (max-width: 1150px) {
     #skills {
-        padding-bottom: 850px;
+        padding-bottom: 750px;
     }
     #skillsInfo {
         height: 100%;
