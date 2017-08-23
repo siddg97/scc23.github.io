@@ -272,24 +272,24 @@ $(function() {
 
 function openModal() {
     document.getElementById('myModal').style.display = "block";
-  }
+}
   
-  function closeModal() {
+function closeModal() {
     document.getElementById('myModal').style.display = "none";
-  }
+}
   
-  var slideIndex = 1;
-  showSlides(slideIndex);
+var slideIndex = 1;
+showSlides(slideIndex);
   
-  function plusSlides(n) {
+function plusSlides(n) {
     showSlides(slideIndex += n);
-  }
+}
   
-  function currentSlide(n) {
+function currentSlide(n) {
     showSlides(slideIndex = n);
-  }
+}
   
-  function showSlides(n) {
+function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
@@ -309,4 +309,21 @@ function openModal() {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
-  }
+}
+
+// Add left and right arrow keyboard keys for user to look through gallery
+$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37:    // Left
+        plusSlides(-1)
+        break;
+
+        case 39:    // Right
+        plusSlides(1)
+        break;
+
+        default:    // Exit this handler for other keys
+        return;
+    }
+    e.preventDefault(); // Prevent default action (scroll / move caret)
+});
