@@ -6,7 +6,7 @@ File Name: index.html
 Author: Sherman Chow
 Date: 2017/07/26
 
-Last Modification: 2017/08/22
+Last Modification: 2017/08/23
 ===================================================================-->
 
 <!DOCTYPE html>
@@ -394,99 +394,167 @@ Last Modification: 2017/08/22
     <div id="gallery">
         <h1>Gallery</h1>
         <br/><br/>
-        <!--Last modification: 08/22/2017-->
-        <!--Add modals for gallery-->
+        <!-- Modal + Lightbox -->
         <div id="galleryPhotos">
-            <img id="myImg1" src="images/gallery/airplane.jpg" alt="Rocky Mountains, North America" style="width:30vw; height:30vw;">
-            <img id="myImg2" src="images/gallery/trees.jpg" alt="Oahu, Hawaii" style="width:30vw; height:30vw;">
-            <img id="myImg3" src="images/gallery/ferriswheel.jpg" alt="Seattle, Washington" style="width:30vw; height:30vw;">
-            <img id="myImg4" src="images/gallery/snowboard.jpg" alt="Whistler, British Columbia" style="width:30vw; height:30vw;">
-            <img id="myImg5" src="images/gallery/whistler.jpg" alt="Whistler, British Columbia" style="width:30vw; height:30vw;">
-            <img id="myImg6" src="images/gallery/chess.jpg" alt="Seattle, Washington" style="width:30vw; height:30vw;">
-            <img id="myImg7" src="images/gallery/flowers.jpg" alt="Seattle, Washington" style="width:30vw; height:30vw;">
-            <img id="myImg8" src="images/gallery/shanghai.jpg" alt="Shanghai, China" style="width:30vw; height:30vw;">
-            <img id="myImg9" src="images/gallery/pattern.jpg" alt="Hangzhou, China" style="width:30vw; height:30vw;">
-            <!-- The Modals -->
-            <div id="myModal1" class="modal1">
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content1" id="img1">
-                <!--Modal Caption (image text)-->
-                <div id="caption1"></div>
-            </div>
-            <div id="myModal2" class="modal2">
-                <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
-                <img class="modal-content2" id="img2">
-                <div id="caption2"></div>
-            </div>
-            <div id="myModal3" class="modal3">
-                <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
-                <img class="modal-content3" id="img3">
-                <div id="caption3"></div>
-            </div>
-            <div id="myModal4" class="modal4">
-                <span class="close" onclick="document.getElementById('myModal4').style.display='none'">&times;</span>
-                <img class="modal-content4" id="img4">
-                <div id="caption4"></div>
-            </div>
-            <div id="myModal5" class="modal5">
-                <span class="close" onclick="document.getElementById('myModal5').style.display='none'">&times;</span>
-                <img class="modal-content5" id="img5">
-                <div id="caption5"></div>
-            </div>
-            <div id="myModal6" class="modal6">
-                <span class="close" onclick="document.getElementById('myModal6').style.display='none'">&times;</span>
-                <img class="modal-content6" id="img6">
-                <div id="caption6"></div>
-            </div>
-            <div id="myModal7" class="modal7">
-                <span class="close" onclick="document.getElementById('myModal7').style.display='none'">&times;</span>
-                <img class="modal-content7" id="img7">
-                <div id="caption7"></div>
-            </div>
-            <div id="myModal8" class="modal8">
-                <span class="close" onclick="document.getElementById('myModal8').style.display='none'">&times;</span>
-                <img class="modal-content8" id="img8">
-                <div id="caption8"></div>
-            </div>
-            <div id="myModal9" class="modal9">
-                <span class="close" onclick="document.getElementById('myModal9').style.display='none'">&times;</span>
-                <img class="modal-content9" id="img9">
-                <div id="caption9"></div>
+            <img src="images/gallery/airplane.jpg" onclick="openModal();currentSlide(1)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/trees.jpg" onclick="openModal();currentSlide(2)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/ferriswheel.jpg" onclick="openModal();currentSlide(3)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/snowboard.jpg" onclick="openModal();currentSlide(4)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/whistler.jpg" onclick="openModal();currentSlide(5)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/chess.jpg" onclick="openModal();currentSlide(6)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/flowers.jpg" onclick="openModal();currentSlide(7)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/shanghai.jpg" onclick="openModal();currentSlide(8)" style="width:30vw; height:30vw;">
+            <img src="images/gallery/pattern.jpg" onclick="openModal();currentSlide(9)" style="width:30vw; height:30vw;">
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 9</div>
+                        <img class="demo" src="images/gallery/airplane.jpg" alt="Rocky Mountains" style="width:40vw; height:40vw;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 9</div>
+                        <img class="demo" src="images/gallery/trees.jpg" alt="Oahu, Hawaii" style="width:40vw; height:40vw;">
+                </div>
+        
+                <div class="mySlides">
+                    <div class="numbertext">3 / 9</div>
+                        <img class="demo" src="images/gallery/ferriswheel.jpg" alt="Seattle, Washington" style="width:40vw; height:40vw;">
+                </div>
+        
+                <div class="mySlides">
+                    <div class="numbertext">4 / 9</div>
+                        <img class="demo" src="images/gallery/snowboard.jpg" alt="Whistler, British Columbia" style="width:40vw; height:40vw;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 9</div>
+                        <img class="demo" src="images/gallery/whistler.jpg" alt="Whistler, British Columbia" style="width:40vw; height:40vw;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 9</div>
+                        <img class="demo" src="images/gallery/chess.jpg" alt="Seattle, Washington" style="width:40vw; height:40vw;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 9</div>
+                        <img class="demo" src="images/gallery/flowers.jpg" alt="Seattle, Washington" style="width:40vw; height:40vw;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 9</div>
+                        <img class="demo" src="images/gallery/shanghai.jpg" alt="Shanghai, China" style="width:40vw; height:40vw;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 9</div>
+                        <img class="demo" src="images/gallery/pattern.jpg" alt="Hangzhou, China" style="width:40vw; height:40vw;">
+                </div>
+        
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
             </div>
         </div>
-        <!--<div id="galleryPhotos">
-            <a href="images/gallery/airplane.jpg">
-                <img src="images/gallery/airplane.jpg" />
-            </a>
-            <a href="images/gallery/trees.jpg">
-                <img src="images/gallery/trees.jpg" />
-            </a>
-            <a href="images/gallery/ferriswheel.jpg">
-                <img src="images/gallery/ferriswheel.jpg" />
-            </a>
-            <a href="images/gallery/snowboard.jpg">
-                <img src="images/gallery/snowboard.jpg" />
-            </a>
-            <a href="images/gallery/whistler.jpg">
-                <img src="images/gallery/whistler.jpg" />
-            </a>
-            <a href="images/gallery/chess.jpg">
-                <img src="images/gallery/chess.jpg" />
-            </a>
-            <a href="images/gallery/flowers.jpg">
-                <img src="images/gallery/flowers.jpg" />
-            </a>
-            <a href="images/gallery/shanghai.jpg">
-                <img src="images/gallery/shanghai.jpg" />
-            </a>
-            <a href="images/gallery/pattern.jpg">
-                <img src="images/gallery/pattern.jpg" />
-            </a>
-        </div>-->
         <br/><br/>
     </div>
+
+    <!-- Only modals -->
+    <!-- <div id="galleryPhotos">
+        <img id="myImg1" src="images/gallery/airplane.jpg" alt="Rocky Mountains, North America" style="width:30vw; height:30vw;">
+        <img id="myImg2" src="images/gallery/trees.jpg" alt="Oahu, Hawaii" style="width:30vw; height:30vw;">
+        <img id="myImg3" src="images/gallery/ferriswheel.jpg" alt="Seattle, Washington" style="width:30vw; height:30vw;">
+        <img id="myImg4" src="images/gallery/snowboard.jpg" alt="Whistler, British Columbia" style="width:30vw; height:30vw;">
+        <img id="myImg5" src="images/gallery/whistler.jpg" alt="Whistler, British Columbia" style="width:30vw; height:30vw;">
+        <img id="myImg6" src="images/gallery/chess.jpg" alt="Seattle, Washington" style="width:30vw; height:30vw;">
+        <img id="myImg7" src="images/gallery/flowers.jpg" alt="Seattle, Washington" style="width:30vw; height:30vw;">
+        <img id="myImg8" src="images/gallery/shanghai.jpg" alt="Shanghai, China" style="width:30vw; height:30vw;">
+        <img id="myImg9" src="images/gallery/pattern.jpg" alt="Hangzhou, China" style="width:30vw; height:30vw;">
+        <div id="myModal1" class="modal1">
+            <span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+            <img class="modal-content1" id="img1">
+            <div id="caption1"></div>
+        </div>
+        <div id="myModal2" class="modal2">
+            <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+            <img class="modal-content2" id="img2">
+            <div id="caption2"></div>
+        </div>
+        <div id="myModal3" class="modal3">
+            <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
+            <img class="modal-content3" id="img3">
+            <div id="caption3"></div>
+        </div>
+        <div id="myModal4" class="modal4">
+            <span class="close" onclick="document.getElementById('myModal4').style.display='none'">&times;</span>
+            <img class="modal-content4" id="img4">
+            <div id="caption4"></div>
+        </div>
+        <div id="myModal5" class="modal5">
+            <span class="close" onclick="document.getElementById('myModal5').style.display='none'">&times;</span>
+            <img class="modal-content5" id="img5">
+            <div id="caption5"></div>
+        </div>
+        <div id="myModal6" class="modal6">
+            <span class="close" onclick="document.getElementById('myModal6').style.display='none'">&times;</span>
+            <img class="modal-content6" id="img6">
+            <div id="caption6"></div>
+        </div>
+        <div id="myModal7" class="modal7">
+            <span class="close" onclick="document.getElementById('myModal7').style.display='none'">&times;</span>
+            <img class="modal-content7" id="img7">
+            <div id="caption7"></div>
+        </div>
+        <div id="myModal8" class="modal8">
+            <span class="close" onclick="document.getElementById('myModal8').style.display='none'">&times;</span>
+            <img class="modal-content8" id="img8">
+            <div id="caption8"></div>
+        </div>
+        <div id="myModal9" class="modal9">
+            <span class="close" onclick="document.getElementById('myModal9').style.display='none'">&times;</span>
+            <img class="modal-content9" id="img9">
+            <div id="caption9"></div>
+        </div>
+    </div> -->
+
+
+    <!-- Very simple gallery -->
+    <!--<div id="galleryPhotos">
+        <a href="images/gallery/airplane.jpg">
+            <img src="images/gallery/airplane.jpg" />
+        </a>
+        <a href="images/gallery/trees.jpg">
+            <img src="images/gallery/trees.jpg" />
+        </a>
+        <a href="images/gallery/ferriswheel.jpg">
+            <img src="images/gallery/ferriswheel.jpg" />
+        </a>
+        <a href="images/gallery/snowboard.jpg">
+            <img src="images/gallery/snowboard.jpg" />
+        </a>
+        <a href="images/gallery/whistler.jpg">
+            <img src="images/gallery/whistler.jpg" />
+        </a>
+        <a href="images/gallery/chess.jpg">
+            <img src="images/gallery/chess.jpg" />
+        </a>
+        <a href="images/gallery/flowers.jpg">
+            <img src="images/gallery/flowers.jpg" />
+        </a>
+        <a href="images/gallery/shanghai.jpg">
+            <img src="images/gallery/shanghai.jpg" />
+        </a>
+        <a href="images/gallery/pattern.jpg">
+            <img src="images/gallery/pattern.jpg" />
+        </a>
+    </div>-->
 
     <!--End Section to keep the contact info and remaining page the same background colour-->
     <div id="end">
