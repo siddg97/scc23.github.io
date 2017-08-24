@@ -312,17 +312,22 @@ function showSlides(n) {
 }
 
 // Add left and right arrow keyboard keys for user to look through gallery
+// Esc key to close modal window
 $(document).keydown(function(e) {
     switch(e.which) {
-        case 37:    // Left
-        plusSlides(-1)
+        case 27:        // Esc
+        closeModal();   // Close modal window
         break;
 
-        case 39:    // Right
-        plusSlides(1)
+        case 37:        // Left
+        plusSlides(-1); // Previous photo
         break;
 
-        default:    // Exit this handler for other keys
+        case 39:        // Right
+        plusSlides(1);  // Next photo
+        break;
+
+        default:        // Exit this handler for other keys
         return;
     }
     e.preventDefault(); // Prevent default action (scroll / move caret)
