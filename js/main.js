@@ -269,66 +269,75 @@ $(function() {
 //     captionText9.innerHTML = this.alt;
 // };
 
+// Get modal
+var modal = document.getElementById('myModal');
 
 function openModal() {
     document.getElementById('myModal').style.display = "block";
 }
-  
+
 function closeModal() {
     document.getElementById('myModal').style.display = "none";
 }
-  
+
 var slideIndex = 1;
 showSlides(slideIndex);
-  
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-  
+
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-  
+
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
     var captionText = document.getElementById("caption");
     if (n > slides.length) {
-        slideIndex = 1
+        slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+        slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
 // Add left and right arrow keyboard keys for user to look through gallery
 // Esc key to close modal window
 $(document).keydown(function(e) {
-    switch(e.which) {
-        case 27:        // Esc
-        closeModal();   // Close modal window
-        break;
+    switch (e.which) {
+        case 27: // Esc
+            closeModal(); // Close modal window
+            break;
 
-        case 37:        // Left
-        plusSlides(-1); // Previous photo
-        break;
+        case 37: // Left
+            plusSlides(-1); // Previous photo
+            break;
 
-        case 39:        // Right
-        plusSlides(1);  // Next photo
-        break;
+        case 39: // Right
+            plusSlides(1); // Next photo
+            break;
 
-        default:        // Exit this handler for other keys
-        return;
+        default: // Exit this handler for other keys
+            return;
     }
     e.preventDefault(); // Prevent default action (scroll / move caret)
 });
+
+// Close modal window when user clicks outside modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+};

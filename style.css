@@ -383,7 +383,9 @@ li {
     cursor: pointer;
 }
 
+
 /*-------------Modals for gallery-------------*/
+
 .row:after {
     content: "";
     display: table;
@@ -399,8 +401,10 @@ li {
 .row img:hover {
     opacity: 0.8;
 }
-  
+
+
 /* The Modal (background) */
+
 .modal {
     display: none;
     position: fixed;
@@ -413,8 +417,10 @@ li {
     overflow: auto;
     background-color: black;
 }
-  
+
+
 /* Modal Content */
+
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -424,14 +430,15 @@ li {
     max-width: 1200px; */
     width: 40vw;
     height: 40vw;
-
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
 }
-  
+
+
 /* The Close Button */
+
 .close {
     color: white;
     position: absolute;
@@ -440,19 +447,21 @@ li {
     font-size: 35px;
     font-weight: bold;
 }
-  
+
 .close:hover,
 .close:focus {
     color: #999;
     text-decoration: none;
     cursor: pointer;
 }
-  
+
 .mySlides {
     display: none;
 }
-  
+
+
 /* Next & previous buttons */
+
 .prev,
 .next {
     cursor: pointer;
@@ -469,20 +478,26 @@ li {
     user-select: none;
     -webkit-user-select: none;
 }
-  
+
+
 /* Position the "next button" to the right */
+
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-  
+
+
 /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-  
+
+
 /* Number text (1/3 etc) */
+
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -490,13 +505,12 @@ li {
     position: absolute;
     top: 0;
 }
-  
+
 .caption-container {
     text-align: center;
     background-color: black;
     padding: 2px 16px;
     color: white;
-
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -520,8 +534,9 @@ li {
         transform: scale(1)
     }
 }
-  
-  /* img.hover-shadow {
+
+
+/* img.hover-shadow {
     transition: 0.3s
   }
   
@@ -743,12 +758,11 @@ footer {
 }
 
 
-
-
-
-
 /* ============ OLD CSS FOR OLD MODALS ============ */
+
+
 /* Style the Image Used to Trigger the Modal */
+
 
 /* #myImg1,
 #myImg2,
@@ -763,6 +777,8 @@ footer {
     cursor: pointer;
     transition: 0.3s;
 } */
+
+
 /* 
 #myImg1:hover,
 #myImg2:hover,
@@ -778,6 +794,7 @@ footer {
 
 
 /* The Modal (background) */
+
 
 /* .modal1,
 .modal2,
@@ -802,6 +819,8 @@ footer {
 
 
 /* Modal Content (Image) */
+
+
 /* 
 .modal-content1,
 .modal-content2,
@@ -820,6 +839,7 @@ footer {
 
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
 
 /* #caption1,
 #caption2,
@@ -842,6 +862,8 @@ footer {
 
 
 /* Add Animation - Zoom in the Modal */
+
+
 /* 
 .modal-content1,
 .modal-content2,
@@ -887,6 +909,8 @@ footer {
 
 
 /* The Close Button */
+
+
 /* 
 .close {
     position: absolute;
@@ -907,6 +931,7 @@ footer {
 
 
 /* 100% Image Width on Smaller Screens */
+
 
 /* @media only screen and (max-width: 700px) {
     .modal-content {
