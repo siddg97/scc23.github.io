@@ -81,7 +81,7 @@ $(".name").fadeIn(1000);
 setInterval(function() {
     $(".switchText").fadeOut(550, function() {
         var $this = $(this);
-        $this.text($this.text() == "Software Engineer" ? "Computer Science Student" : "Software Engineer");
+        $this.text($this.text() == "Computer Science Student" ? "Software Developer" : "Computer Science Student");
         $this.fadeIn(420);
     });
 }, 5000);
