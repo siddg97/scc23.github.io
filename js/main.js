@@ -59,3 +59,15 @@ $(document).on("click", ".navbar a", function(event) {
 // Automatic scroll to top smoothly when clicked arrow at bottom of page or Home on navbar
 $(function(){$("#backToTop").click(function(){$("html,body").animate({scrollTop:$("#start").offset().top},"1500");return false})})
 
+// Scroll reveal
+$(document).ready(function() {
+    $('body').hide();
+    $('body').fadeIn(700);
+    window.sr = ScrollReveal({ duration: 1000 });
+    sr.reveal('#about');
+    sr.reveal('#experience_education');
+    sr.reveal('#projects');
+    sr.reveal('#end');
+});
+
+
