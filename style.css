@@ -1,75 +1,29 @@
-/*===================================================================
-Project Title: Personal Website
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
-File Name: style.css
-
-Author: Sherman Chow
-Date: 2017/07/26
-
-Last Modification: 2017/08/23
-===================================================================*/
-
-
-/* Import font */
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
-/* Initial general settings */
-
-
-/* ------------------------------------------------------------------- */
-
-html,
-body {
-    margin: 0px;
-    font-family: 'Montserrat';
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
     background-color: white;
     color: black;
     height: 100%;
     padding: 0;
 }
 
-.slider {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    background: black;
-}
-
 h1 {
-    color: #606060;
-    font-weight: 100;
-    font-size: 50px;
-    clear: left;
-    display: block;
+	clear: left;
+	display: block;
 }
 
 p {
     line-height: 25px;
 }
 
-li {
-    line-height: 25px;
-}
-
-
-/* ------------------------------------------------------------------- */
-
-
-/* Content at top of page */
-
-
-/* ------------------------------------------------------------------- */
-
-
 /* Navigation bar */
-
 .navbar {
-    z-index: 100;
+    z-index: 200;
     overflow: hidden;
-    background-color: #333;
-    background: rgba(0, 0, 0, 0.4);
+    background-color: white;
+    /*background: rgba(0, 0, 0, 0.4);*/
     position: fixed;
     /* Set navbar to fixed position */
     top: 0;
@@ -77,11 +31,10 @@ li {
     width: 100%;
     /* Full width */
     letter-spacing: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 /* Menu icon for small window sizes */
-
 .navbar img {
     width: 25px;
     padding: 8px;
@@ -117,9 +70,7 @@ li {
     opacity: 0.5;
 }
 
-
 /* Align list in center horizontally */
-
 .nav {
     text-align: center;
 }
@@ -128,12 +79,10 @@ li {
     display: inline;
 }
 
-
 /* Links inside navbar */
-
 .navbar a {
     display: inline-block;
-    color: white;
+    color: black;
     text-align: center;
     padding-right: 10px;
     padding-left: 10px;
@@ -147,6 +96,14 @@ li {
 
 .nav a:hover {
     opacity: 0.5;
+}
+
+.slider {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    background: #f4f4f4;
 }
 
 .slider-wrapper {
@@ -170,8 +127,9 @@ li {
 
 .name {
     /* Position text in the center of the screen (horizontally & vertically) */
+    z-index: 100;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -179,21 +137,31 @@ li {
 }
 
 .name p {
-    font-family: 'Montserrat';
-    color: white;
+    color: black;
     text-align: center;
     font-size: 65px;
 }
 
+/* typed js cursor */
+.typed-cursor {
+    opacity: 1;
+    animation: blink .7s infinite;
+}
 
-/* ------------------------------------------------------------------- */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 /* About Me Section */
-
-
-/* ------------------------------------------------------------------- */
-
 #about {
     /*border: 1px solid black;*/
     padding-top: 55px;
@@ -224,6 +192,17 @@ li {
     opacity: 0.7;
 }
 
+/* Work Experience Section */
+#experience {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    background-color: #f4f4f4;
+}
+
+#experience h1 {
+    text-align: center;
+}
+
 #first {
     width: 25%;
     float: left;
@@ -237,61 +216,10 @@ li {
     margin-bottom: 100px;
 }
 
-
-/* ------------------------------------------------------------------- */
-
-
-/* Skills Section */
-
-
-/* ------------------------------------------------------------------- */
-
-#skills {
-    padding-top: 55px;
-    padding-bottom: 350px;
-    background-color: #efefef;
-}
-
-#skills h1 {
-    text-align: center;
-}
-
-#skillsInfo {
-    width: 40%;
-    float: left;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-
-/* ------------------------------------------------------------------- */
-
-
-/* Work Experience Section */
-
-
-/* ------------------------------------------------------------------- */
-
-#experience {
-    padding-top: 55px;
-    padding-bottom: 55px;
-}
-
-#experience h1 {
-    text-align: center;
-}
-
-
-/* ------------------------------------------------------------------- */
-
-
 /* Education Section */
-
-
-/* ------------------------------------------------------------------- */
-
 #education {
     padding-bottom: 200px;
+    background-color: #f4f4f4;
 }
 
 #education h1 {
@@ -299,260 +227,75 @@ li {
 }
 
 
-/* ------------------------------------------------------------------- */
 
-
-/* Technical Projects Section */
-
-
-/* ------------------------------------------------------------------- */
-
-#technicalProjects {
-    padding-top: 55px;
-    padding-bottom: 55px;
-}
-
-#technicalProjects h1 {
+/* Projects */
+#projects {
+	/*border: 1px solid black;*/
+	padding-top: 55px;
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
     text-align: center;
 }
 
-
-/* ------------------------------------------------------------------- */
-
-
-/* Personal Projects Section */
-
-
-/* ------------------------------------------------------------------- */
-
-#personalProjects {
-    padding-bottom: 330px;
+#projects h1 {
+	text-align: center;
 }
 
-#personalProjects h1 {
-    text-align: center;
+.block {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.textOverImage {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin: 4px;
+	background-size: 100%;
+	background-position: center;
+	transition: 0.5s;
+	text-align: left;
+}
+
+.textOverImage:hover {
+	background-size: 110%;
+}
+
+.textOverImage:after {
+	position: absolute;
+    top: 92.5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 0 8px;
+  
+    content: attr(data-text);
+    transition: 0.5s;
+}
+
+.textOverImage:hover:after {
+	top: 0;
+	padding: 8px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+.textOverImage:first-line {
+	color: #fff;
+	font-weight: bold;
+	font-szie: 1.5em;
 }
 
 #projects {
-    background-color: #efefef;
+	margin-bottom: 100px;
 }
-
-
-/* ------------------------------------------------------------------- */
-
-
-/* Gallery Section */
-
-
-/* ------------------------------------------------------------------- */
-
-#gallery {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-#gallery h1 {
-    text-align: center;
-}
-
-#galleryPhotos {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    text-align: center;
-}
-
-#galleryPhotos img {
-    width: 30vw;
-    height: 30vw;
-    transition: opacity .3s ease-out;
-    -moz-transition: opacity .3s ease-out;
-    -webkit-transition: opacity .3s ease-out;
-    -o-transition: opacity .3s ease-out;
-}
-
-#galleryPhotos img:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-#galleryPhotos a {
-    text-decoration: none;
-}
-
-#myImg {
-    cursor: pointer;
-}
-
-
-/*-------------Modals for gallery-------------*/
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row img {
-    cursor: pointer;
-    border-radius: 5px;
-    transform: 0.3s;
-}
-
-.row img:hover {
-    opacity: 0.8;
-}
-
-
-/* The Modal (background) */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 500;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: black;
-}
-
-
-/* Modal Content */
-
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    /* width: 90%;
-    max-width: 1200px; */
-    width: 40vw;
-    height: 40vw;
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-
-/* The Close Button */
-
-.close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.mySlides {
-    display: none;
-}
-
-
-/* Next & previous buttons */
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-
-/* Position the "next button" to the right */
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Number text (1/3 etc) */
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {
-        -webkit-transform: scale(0)
-    }
-    to {
-        -webkit-transform: scale(1)
-    }
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
-}
-
-
-/* img.hover-shadow {
-    transition: 0.3s
-  }
-  
-  .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-  } */
-
-
-/* ------------------------------------------------------------------- */
-
 
 /* Contact Info Section */
-
-
-/* ------------------------------------------------------------------- */
-
 #contact {
     padding-top: 60px;
     padding-bottom: 250px;
@@ -607,27 +350,7 @@ img#iconLoc {
     text-decoration: none;
 }
 
-img#iconStar {
-    height: 20px;
-    margin-left: 2px;
-    border: 0 none;
-    position: relative;
-    padding-right: 5px;
-}
-
-#iconStar {
-    text-decoration: none;
-}
-
-
-/* ------------------------------------------------------------------- */
-
-
 /* Content at bottom of page */
-
-
-/* ------------------------------------------------------------------- */
-
 footer {
     margin-left: 10vw;
     margin-right: 10vw;
@@ -638,7 +361,7 @@ footer {
     bottom: 0px;
     margin-left: 10vw;
     margin-right: 10vw;
-    opacity: 0.4;
+    opacity: 0.25;
 }
 
 #backToTop img {
@@ -655,286 +378,5 @@ footer {
 }
 
 #end {
-    background-color: #efefef;
+    background-color: #f4f4f4;
 }
-
-
-/* ------------------------------------------------------------------- */
-
-
-/* Adjustments depending on window size */
-
-
-/* ------------------------------------------------------------------- */
-
-@media only screen and (max-width: 400px) {
-    /* Links inside navbar */
-    /* Place the links all in one column */
-    .navbar a {
-        display: block;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-    /* Make my photo smaller to fit in the center of the page */
-    /* #myPhoto {
-        width: 200px;
-    } */
-}
-
-@media only screen and (max-width: 490px) {
-    /* Place all contact links in one column */
-    #contactInfo {
-        width: 170px;
-    }
-    #left,
-    #right {
-        float: none;
-    }
-    #contact {
-        padding-bottom: 50px;
-    }
-    /* Make name smaller on cover photo */
-    .name p {
-        font-size: 55px;
-    }
-}
-
-@media only screen and (max-width: 1180px) {
-    /* Place my photo in the center */
-    #myPhoto {
-        float: none;
-        display: block;
-        margin: auto;
-    }
-    /* Place the about me text under my photo */
-    #about p {
-        clear: both;
-    }
-    /* Hide invidivual navigation links */
-    .nav {
-        display: none;
-    }
-    /* Show menu icon for navigation */
-    .navbar img {
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    #first {
-        height: 100%;
-        width: 100%;
-        float: none;
-        display: block;
-        margin: 0;
-        margin-top: 50px;
-    }
-    #second {
-        height: 100%;
-        width: 100%;
-        float: none;
-        display: block;
-        margin: 0;
-        margin-bottom: 50px;
-    }
-    #education {
-        padding-bottom: 55px;
-    }
-    #personalProjects {
-        padding-bottom: 55px;
-    }
-}
-
-@media only screen and (max-width: 1150px) {
-    #skills {
-        padding-bottom: 750px;
-    }
-    #skillsInfo {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        display: block;
-    }
-}
-
-
-/* ============ OLD CSS FOR OLD MODALS ============ */
-
-
-/* Style the Image Used to Trigger the Modal */
-
-
-/* #myImg1,
-#myImg2,
-#myImg3,
-#myImg4,
-#myImg5,
-#myImg6,
-#myImg7,
-#myImg8,
-#myImg9 {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-} */
-
-
-/* 
-#myImg1:hover,
-#myImg2:hover,
-#myImg3:hover,
-#myImg4:hover,
-#myImg5:hover,
-#myImg6:hover,
-#myImg7:hover,
-#myImg8:hover,
-#myImg9:hover {
-    opacity: 0.7;
-} */
-
-
-/* The Modal (background) */
-
-
-/* .modal1,
-.modal2,
-.modal3,
-.modal4,
-.modal5,
-.modal6,
-.modal7,
-.modal8,
-.modal9 {
-    position: fixed;
-    z-index: 500;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-} */
-
-
-/* Modal Content (Image) */
-
-
-/* 
-.modal-content1,
-.modal-content2,
-.modal-content3,
-.modal-content4,
-.modal-content5,
-.modal-content6,
-.modal-content7,
-.modal-content8,
-.modal-content9 {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-} */
-
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-
-
-/* #caption1,
-#caption2,
-#caption3,
-#caption4,
-#caption5,
-#caption6,
-#caption7,
-#caption8,
-#caption9 {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-} */
-
-
-/* Add Animation - Zoom in the Modal */
-
-
-/* 
-.modal-content1,
-.modal-content2,
-.modal-content3,
-.modal-content4,
-.modal-content5,
-.modal-content6,
-.modal-content7,
-.modal-content8,
-.modal-content9,
-#caption1,
-#caption2,
-#caption3,
-#caption4,
-#caption5,
-#caption6,
-#caption7,
-#caption8,
-#caption9 {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {
-        -webkit-transform: scale(0)
-    }
-    to {
-        -webkit-transform: scale(1)
-    }
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
-} */
-
-
-/* The Close Button */
-
-
-/* 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-} */
-
-
-/* 100% Image Width on Smaller Screens */
-
-
-/* @media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
-} */
