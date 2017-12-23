@@ -265,7 +265,7 @@ p {
 
 .textOverImage:after {
 	position: absolute;
-    top: 92.5%;
+    top: 92.2%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -361,7 +361,7 @@ footer {
     bottom: 0px;
     margin-left: 10vw;
     margin-right: 10vw;
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 #backToTop img {
