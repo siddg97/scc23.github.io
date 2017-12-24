@@ -1,3 +1,20 @@
+// Welcome screen effect
+$(function() {
+    var welcomeSection = $('.welcome-section'),
+        enterButton = welcomeSection.find('.enter-button');
+    setTimeout(function() {
+        welcomeSection.removeClass('content-hidden');
+    }, 500);
+});
+
+// Fade out welcome screen
+$(document).ready(function() {
+    // $('#hideMe').fadeOut(3000);
+    setTimeout(function() {
+        $('#hideMe').fadeOut(700)
+    }, 3200);
+});
+
 // Cover photo slideshow
 (function() {
     function Slideshow(element) {

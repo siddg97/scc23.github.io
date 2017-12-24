@@ -1,5 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
+/* Welcome screen */
+.welcome-section {
+    z-index: 9999999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+.welcome-section .content-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.welcome-section .content-wrap .fly-in-text {
+    list-style: none;
+}
+.welcome-section .content-wrap .fly-in-text li {
+    display: inline-block;
+    /*margin-right: 50px;*/
+    margin-right: 2vw;
+    /*font-size: 3em;*/
+    font-size: 2vw;
+    color: #fff;
+    opacity: 1;
+    transition: all 2s ease;
+}
+.welcome-section .content-wrap .fly-in-text li:last-child {
+    margin-right: 0;
+}
+.welcome-section .content-wrap{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #adff2f;
+    opacity: 1;
+    transition: all 1s ease 2s;
+}
+
+.welcome-section.content-hidden .content-wrap .fly-in-text li { opacity:0; }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(2) { transform: translateX(20px) translateY(100px); }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(4) { transform: translateX(10px) translateY(-200px); }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(5) { transform: translateX(-300px) translateY(200px); }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(6) { transform: translateX(20px) translateY(-20px); }
+.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
+
 html, body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0px;
