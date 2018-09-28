@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="lib/typed.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="lib/typed.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -15,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -24,7 +25,7 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-	<title>Profile | Sherman Chow</title>
+    <title>Profile | Sherman Chow</title>
 </head>
 
 <body>
@@ -44,7 +45,7 @@
         </div>
     </div>
 
-	<!--div for easy navigation-->
+    <!--div for easy navigation-->
     <div id="start">
         <div class="navbar">
             <!--Standard navigation bar-->
@@ -60,30 +61,30 @@
     <div class="name">
         <p style="line-height: 100%;">Sherman Chow</p>
         <hr style="margin-top: -40px;" size="1">
-    	<center>
-    	<div id="typed-strings">
-	    	<p>Computer Science Student</p>
-	    	<p>Software Developer</p>
-	    	<p>Firmware Engineer</p>
-	    </div>
-	    <span id="typed"></span>
-		</center>
-	    <script>
-	    	var typed = new Typed('#typed', {
-	    		stringsElement: '#typed-strings',
-	    		typeSpeed: 30,
-	    		backSpeed: 25,
-	    		backDelay: 2000,
-	    		loop: true
-	    	});
-	    </script>
-	</div>
-	
-	<div class="slider" id="main-slider">
+        <center>
+            <div id="typed-strings">
+                <p>Computer Science Student</p>
+                <p>Software Developer</p>
+                <p>Firmware Engineer</p>
+            </div>
+            <span id="typed"></span>
+        </center>
+        <script>
+            var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 30,
+                backSpeed: 25,
+                backDelay: 2000,
+                loop: true
+            });
+        </script>
+    </div>
+
+    <div class="slider" id="main-slider">
         <!-- Outermost container element -->
         <div class="slider-wrapper">
             <!-- Innermost wrapper element -->
-            <img src="images/cover/mountains.jpg" alt="First" class="slide" style="opacity:0.9;"/>
+            <img src="images/cover/mountains.jpg" alt="First" class="slide" style="opacity:0.9;" />
             <!-- <img src="images/slideshow/2.JPG" alt="Second" class="slide" />
             <img src="images/slideshow/3.jpg" alt="Third" class="slide" />
             <img src="images/slideshow/4.jpg" alt="Fourth" class="slide" /> -->
@@ -94,150 +95,138 @@
     <div id="about">
         <h1>About Me</h1>
         <div style="margin-left: 12vw; margin-right: 12vw;">
-            <!-- <img id="myPhoto" src="images/profile/shermanPhoto.jpg" alt="My photo"> -->
             <center>
-	        	<p>
-	                <br/>My name is Sherman Chow and I'm a computer science student at SFU from Vancouver, Canada.
-	                <br/><br/> I enjoy programming, video gaming, and playing the piano and violin.
-	                <br/><br/> To learn more about me, click on my resume.
-	                <br/><br/>
-	                <!-- Resume -->
-	                <a id="icon" href="files/shermanchow_resume.pdf">
-	                    <img id="icon" src="images/icons/resume.png" />
-	                </a>
-	                <a id="resume" href="files/shermanchow_resume.pdf">Resume</a>
-	            </p>
-        	</center>
+            	<img id="myPhoto" src="images/profile/sherman_photo.png" alt="My photo">
+                <p>
+                    My name is Sherman Chow and I'm a computer science student at SFU from Vancouver, Canada.
+                    <br/><br/> I enjoy programming, video gaming, and playing the piano and violin.
+                    <br/><br/> To learn more about me, click on my resume.
+                    <br/><br/>
+                    <!-- Resume -->
+                    <a id="icon" href="files/shermanchow_resume.pdf">
+                        <img id="icon" src="images/icons/resume.png" />
+                    </a>
+                    <a id="resume" href="files/shermanchow_resume.pdf">Resume</a>
+                </p>
+            </center>
         </div>
     </div>
 
-    
+
     <!--Work Experience Section-->
     <div id="experience_education">
-    <div id="experience">
-        <h1>Work Experience</h1>
-        <br/>
-        <div style="margin-left: 12vw; margin-right: 12vw;">
-            <div id="first">
-                <p>
-                    <!-- <b>Intel Corporation</b> -->
-                    <b>Internship</b>
-                    <br/><img id="iconLoc" src="images/icons/work.png" />Intel Corporation
-                    <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2018 - Aug 2018
-                    <br/><img id="iconLoc" src="images/icons/location.png" />Vancouver, BC
-                </p>
+        <div id="experience">
+            <h1>Work Experience</h1>
+            <br/>
+            <div style="margin-left: 12vw; margin-right: 12vw;">
+                <div id="first">
+                    <p>
+                        <!-- <b>Intel Corporation</b> -->
+                        <b>Internship</b>
+                        <br/><img id="iconLoc" src="images/icons/work.png" />Intel Corporation
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2018 - Aug 2018
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Vancouver, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Firmware Engineer Intern</b>
+                        <br/>Developed features and fixed bugs in C for the next generation Optane SSDs, with a team of 20 people. Created a software tool in Python with a GUI that generates a visualization of the data layout of the Optane SSD according to specified configurations.
+                    </p>
+                </div>
             </div>
-            <div id="second">
-                <p>
-                    <b>Firmware Engineer Intern</b>
-                    <br/>Will be starting in January 2018. Stay tuned for more!
-                </p>
+            <div style="margin-left: 12vw; margin-right: 12vw;">
+                <div id="first">
+                    <p>
+                        <!-- <b>Sierra Wireless Inc.</b> -->
+                        <b>Internship</b>
+                        <br/><img id="iconLoc" src="images/icons/work.png" />Sierra Wireless Inc.
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2017 - Aug 2017
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Richmond, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Software Engineer Intern</b>
+                        <br/>Developed software, analyzed defects, and verified bug fixes for <i>AirPrime</i> modules, with a team of 12 people. Developed APIs in C++ using TLV encoding to add new support for our products. Investigated new features using
+                        Microsoft Azure and mobile device management solutions to develop new capabilities for our products.
+                    </p>
+                </div>
             </div>
         </div>
-        <div style="margin-left: 12vw; margin-right: 12vw;">
-            <div id="first">
-                <p>
-                    <!-- <b>Sierra Wireless Inc.</b> -->
-                    <b>Internship</b>
-                    <br/><img id="iconLoc" src="images/icons/work.png" />Sierra Wireless Inc.
-                    <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2017 - Aug 2017
-                    <br/><img id="iconLoc" src="images/icons/location.png" />Richmond, BC
-                </p>
-            </div>
-            <div id="second">
-                <p>
-                    <b>Software Engineer Intern</b>
-                    <br/>Developed software, analyzed defects, and verified bug fixes for <i>AirPrime</i> modules, with a team of 12 people. Developed APIs in C++ using TLV encoding to add new support for our products. Investigated new features using
-                    Microsoft Azure and mobile device management solutions to develop new capabilities for our products.
-                </p>
+
+        <!--Education Section-->
+        <div id="education">
+            <h1>Education</h1>
+            <br/>
+            <div style="margin-left: 12vw; margin-right: 12vw;">
+                <div id="first">
+                    <p>
+                        <b>Simon Fraser University</b>
+                        <br/><img id="iconLoc" src="images/icons/clock.png" />Sept 2013 - Present
+                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                    </p>
+                </div>
+                <div id="second">
+                    <p>
+                        <b>Bachelor of Science - Major in Computing Science</b>
+                        <br/>Awarded the Dean's Honour Roll (Spring 2016) by achieving a 3.50 or higher GPA. Studied one year abroad at Zhejiang University in Hangzhou, China (Sept 2014 - June 2015).
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--Education Section-->
-    <div id="education">
-        <h1>Education</h1>
-        <br/>
-        <div style="margin-left: 12vw; margin-right: 12vw;">
-            <div id="first">
-                <p>
-                    <b>Simon Fraser University</b>
-                    <br/><img id="iconLoc" src="images/icons/clock.png" />Sept 2013 - Present
-                    <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
-                </p>
-            </div>
-            <div id="second">
-                <p>
-                    <b>Bachelor of Science - Major in Computing Science</b>
-                    <br/>Awarded the Dean's Honour Roll (Spring 2016) by achieving a 3.50 or higher GPA. Studied one year abroad at Zhejiang University in Hangzhou, China (Sept 2014 - June 2015).
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-
-	<div id="projects">
-		<h1>Projects</h1>
-		<div class="block">
-			<a href="https://github.com/scc23/producer-consumer-problem">
-				<div class="textOverImage" 
-				style="background-image:url(images/projects/producer-consumer.png)"
-				data-text="Producer-Consumer Problem 
+    <div id="projects">
+        <h1>Projects</h1>
+        <div class="block">
+            <a href="https://github.com/scc23/producer-consumer-problem">
+                <div class="textOverImage" style="background-image:url(images/projects/producer-consumer.png)" data-text="Producer-Consumer Problem 
 A multithreaded program written in C using POSIX Threads and semaphores that solves the producer-consumer problem (also known as the bounded-buffer problem).">
-				</div>
-			</a>
-		</div>
-		<div class="block">
-			<a href="https://github.com/scc23/simple-shell">
-				<div class="textOverImage" 
-				style="background-image:url(images/projects/simple_shell.png)" 
-				data-text="UNIX Shell
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="https://github.com/scc23/simple-shell">
+                <div class="textOverImage" style="background-image:url(images/projects/simple_shell.png)" data-text="UNIX Shell
 A UNIX shell program written in C using system calls to interact with the kernel.">
-				</div>
-			</a>
-		</div>
-		<div class="block">
-			<a href="https://github.com/scc23/Shogi-Game">
-				<div class="textOverImage" 
-				style="background-image:url(images/projects/shogi.png)" 
-				data-text="Shogi Japanese Chess Game
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="https://github.com/scc23/Shogi-Game">
+                <div class="textOverImage" style="background-image:url(images/projects/shogi.png)" data-text="Shogi Japanese Chess Game
 A Japanese chess game, Shogi, written in Julia language with artificial intelligence, a graphical user interface, and networking capabilities. The artifical intelligence is implemented using the alpha-beta pruning and Monte Carlo tree search algorithms.">
-				</div>
-			</a>
-		</div>
-		<div class="block">
-			<a href="https://github.com/scc23/tic-tac-toe">
-				<div class="textOverImage" 
-				style="background-image:url(images/projects/tic-tac-toe.png)" 
-				data-text="Tic-Tac-Toe
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="https://github.com/scc23/tic-tac-toe">
+                <div class="textOverImage" style="background-image:url(images/projects/tic-tac-toe.png)" data-text="Tic-Tac-Toe
 A Tic-Tac-Toe game written in Python with a graphical user interface and artifical intelligence. The artifical intelligence is implemented using the minimax search algorithm.">
-				</div>
-			</a>
-		</div>
-		<div class="block">
-			<a href="https://github.com/scc23/English-Klingon-Translator">
-				<div class="textOverImage" 
-				style="background-image:url(images/projects/ekt.png)" 
-				data-text="English-Klingon Translator
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="https://github.com/scc23/English-Klingon-Translator">
+                <div class="textOverImage" style="background-image:url(images/projects/ekt.png)" data-text="English-Klingon Translator
 A command-line application of an English-Klingon (language of fictional characters in Star Trek) translator written in C++ using a binary search tree and a hash table to translate individual words.">
-				</div>
-			</a>
-		</div>
-		<div class="block">
-			<a href="https://github.com/scc23/CMPT120-Adventure-Game">
-				<div class="textOverImage" 
-				style="background-image:url(images/projects/adventure_game.png)" 
-				data-text="Adventure Game
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="https://github.com/scc23/CMPT120-Adventure-Game">
+                <div class="textOverImage" style="background-image:url(images/projects/adventure_game.png)" data-text="Adventure Game
 An adventure game written in Python that allows a single player to interact with the system. The images are created using turtle graphics.">
-				</div>
-			</a>
-		</div>
-	</div>
-	
-	
+                </div>
+            </a>
+        </div>
+    </div>
 
-	
-	<!--End Section to keep the contact info and remaining page the same background colour-->
+
+
+
+    <!--End Section to keep the contact info and remaining page the same background colour-->
     <div id="end">
         <!--Contact Info Section-->
         <div id="contact">
@@ -299,9 +288,5 @@ An adventure game written in Python that allows a single player to interact with
 
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </body>
+
 </html>
-
-
-
-
-
