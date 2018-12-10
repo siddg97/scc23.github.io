@@ -160,6 +160,11 @@ p {
     opacity: 0.5;
 }
 
+#particles-js {
+    height: 100%;
+    background: #8c8c8c;
+}
+
 .slider {
     height: 100%;
     position: relative;
