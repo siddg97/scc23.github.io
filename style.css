@@ -71,6 +71,15 @@ p {
     line-height: 25px;
 }
 
+.info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.notes {
+    padding-left: 20px;
+}
+
 /* Navigation bar */
 .navbar {
     z-index: 200;

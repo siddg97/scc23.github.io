@@ -98,9 +98,10 @@
             <center>
             	<img id="myPhoto" src="images/profile/sherman_photo.png" alt="My photo">
                 <p>
-                    My name is Sherman Chow and I'm a computer science student at SFU from Vancouver, Canada.
-                    <br/><br/> I enjoy programming, video gaming, and playing the piano and violin.
-                    <br/><br/> To learn more about me, click on my resume.
+                    Hi, welcome to my page!
+                    <br><br>I'm Sherman and I'm a computer science student at SFU from Vancouver, Canada.
+                    <br><br>I enjoy programming, video gaming, and playing the piano and violin.
+                    <br><br>To learn more about me, click on my resume.
                     <br/><br/>
                     <!-- Resume -->
                     <a id="icon" href="files/shermanchow_resume.pdf">
@@ -123,15 +124,22 @@
                     <p>
                         <!-- <b>Intel Corporation</b> -->
                         <b>Internship</b>
-                        <br/><img id="iconLoc" src="images/icons/work.png" />Intel Corporation
-                        <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2018 - Aug 2018
-                        <br/><img id="iconLoc" src="images/icons/location.png" />Vancouver, BC
+                        <ul class="info">
+                        <li><img id="iconLoc" src="images/icons/work.png" />Intel Corporation</li>
+                        <li><img id="iconLoc" src="images/icons/clock.png" />Jan 2018 - Aug 2018</li>
+                        <li><img id="iconLoc" src="images/icons/location.png" />Vancouver, BC</li>
+                        </ul>
                     </p>
                 </div>
                 <div id="second">
                     <p>
                         <b>Firmware Engineer Intern</b>
-                        <br/>Developed features and fixed bugs in C for the next generation Optane SSDs, with a team of 20 people. Created a software tool in Python with a GUI that generates a visualization of the data layout of the Optane SSD according to specified configurations.
+                        <ul class="notes">
+                            <li>Developed firmware in C and C++ for the next generation Optane solid state drives</il>
+                            <li>Created and improved unit tests for new features to ensure that corner cases were exercised</li>
+                            <li>Updated code and ported bug fixes from previous generation firmware to interface with new hardware</li>
+                            <li>Developed a software tool in Python with a GUI to generate a visualization of the Optane solid state drive data layout for engineers to debug firmware</li>
+                        </ul>
                     </p>
                 </div>
             </div>
@@ -140,16 +148,21 @@
                     <p>
                         <!-- <b>Sierra Wireless Inc.</b> -->
                         <b>Internship</b>
-                        <br/><img id="iconLoc" src="images/icons/work.png" />Sierra Wireless Inc.
-                        <br/><img id="iconLoc" src="images/icons/clock.png" />Jan 2017 - Aug 2017
-                        <br/><img id="iconLoc" src="images/icons/location.png" />Richmond, BC
+                        <ul class="info">
+                            <li><img id="iconLoc" src="images/icons/work.png" />Sierra Wireless Inc.</li>
+                            <li><img id="iconLoc" src="images/icons/clock.png" />Jan 2017 - Aug 2017</li>
+                            <li><img id="iconLoc" src="images/icons/location.png" />Richmond, BC</li>
+                        </ul>
                     </p>
                 </div>
                 <div id="second">
                     <p>
                         <b>Software Engineer Intern</b>
-                        <br/>Developed software, analyzed defects, and verified bug fixes for <i>AirPrime</i> modules, with a team of 12 people. Developed APIs in C++ using TLV encoding to add new support for our products. Investigated new features using
-                        Microsoft Azure and mobile device management solutions to develop new capabilities for our products.
+                        <ul class="notes">
+                            <li>Developed APIs in C++, analyzed defects, and fixed bugs for AirPrime modules</li>
+                            <li>Implemented new functionalities in our test application to test corner cases and validate new features</li>
+                            <li>Investigated new features using Microsoft Azure and mobile device management solutions to develop new capabilities for our products</li>
+                        </ul>
                     </p>
                 </div>
             </div>
@@ -163,14 +176,19 @@
                 <div id="first">
                     <p>
                         <b>Simon Fraser University</b>
-                        <br/><img id="iconLoc" src="images/icons/clock.png" />Sept 2013 - Present
-                        <br/><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC
+                        <ul class="info">
+                            <li><img id="iconLoc" src="images/icons/clock.png" />Sept 2013 - Aug 2019</li>
+                            <li><img id="iconLoc" src="images/icons/location.png" />Burnaby, BC</li>
+                        </ul>
                     </p>
                 </div>
                 <div id="second">
                     <p>
                         <b>Bachelor of Science - Major in Computing Science</b>
-                        <br/>Awarded the Dean's Honour Roll (Spring 2016) by achieving a 3.50 or higher GPA. Studied one year abroad at Zhejiang University in Hangzhou, China (Sept 2014 - June 2015).
+                        <ul class="notes">
+                            <li>Awarded the Dean's Honour Roll (Spring 2016) by achieving a 3.50 or higher GPA</li>
+                            <li>Studied one year abroad at Zhejiang University in Hangzhou, China (Sept 2014 - June 2015)</li>
+                        </ul>
                     </p>
                 </div>
             </div>
@@ -179,17 +197,11 @@
 
     <div id="projects">
         <h1>Projects</h1>
+        <br>
         <div class="block">
-            <a href="https://github.com/scc23/producer-consumer-problem">
-                <div class="textOverImage" style="background-image:url(images/projects/producer-consumer.png)" data-text="Producer-Consumer Problem 
-A multithreaded program written in C using POSIX Threads and semaphores that solves the producer-consumer problem (also known as the bounded-buffer problem).">
-                </div>
-            </a>
-        </div>
-        <div class="block">
-            <a href="https://github.com/scc23/simple-shell">
-                <div class="textOverImage" style="background-image:url(images/projects/simple_shell.png)" data-text="UNIX Shell
-A UNIX shell program written in C using system calls to interact with the kernel.">
+            <a href="https://github.com/scc23/musync">
+                <div class="textOverImage" style="background-image:url(images/projects/musync.png); background-repeat: no-repeat; background-color: black" data-text="Music Sync Web App
+A web application that allows users to create/join sessions to listen to synchronized music and chat online in real-time with other users. Used the LEMP stack, Laravel, Vue.js, and Bootstrap for development. Interfaced with the Spotify Web API and Web Playback SDK.">
                 </div>
             </a>
         </div>
@@ -201,26 +213,40 @@ A Japanese chess game, Shogi, written in Julia language with artificial intellig
             </a>
         </div>
         <div class="block">
+            <a href="https://github.com/scc23/producer-consumer-problem">
+                <div class="textOverImage" style="background-image:url(images/projects/producer-consumer.png)" data-text="Producer-Consumer Problem 
+A multithreaded program written in C using POSIX Threads and semaphores that solves the producer-consumer problem (also known as the bounded-buffer problem).">
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="https://github.com/scc23/simple-shell">
+                <div class="textOverImage" style="background-image:url(images/projects/simple_shell2.png)" data-text="UNIX Shell
+A UNIX shell program written in C using system calls to interact with the kernel.">
+                </div>
+            </a>
+        </div>
+        <!-- <div class="block">
             <a href="https://github.com/scc23/tic-tac-toe">
                 <div class="textOverImage" style="background-image:url(images/projects/tic-tac-toe.png)" data-text="Tic-Tac-Toe
 A Tic-Tac-Toe game written in Python with a graphical user interface and artifical intelligence. The artifical intelligence is implemented using the minimax search algorithm.">
                 </div>
             </a>
-        </div>
-        <div class="block">
+        </div> -->
+        <!-- <div class="block">
             <a href="https://github.com/scc23/English-Klingon-Translator">
                 <div class="textOverImage" style="background-image:url(images/projects/ekt.png)" data-text="English-Klingon Translator
 A command-line application of an English-Klingon (language of fictional characters in Star Trek) translator written in C++ using a binary search tree and a hash table to translate individual words.">
                 </div>
             </a>
-        </div>
-        <div class="block">
+        </div> -->
+        <!-- <div class="block">
             <a href="https://github.com/scc23/CMPT120-Adventure-Game">
                 <div class="textOverImage" style="background-image:url(images/projects/adventure_game.png)" data-text="Adventure Game
 An adventure game written in Python that allows a single player to interact with the system. The images are created using turtle graphics.">
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
 
 
