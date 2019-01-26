@@ -1,441 +1,259 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-
-/* Welcome screen */
-.welcome-section {
-    z-index: 9999999;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    overflow: hidden;
-}
-.welcome-section .content-wrap {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-}
-.welcome-section .content-wrap .fly-in-text {
-    list-style: none;
-}
-.welcome-section .content-wrap .fly-in-text li {
-    display: inline-block;
-    /*margin-right: 50px;*/
-    margin-right: 2vw;
-    /*font-size: 3em;*/
-    font-size: 2vw;
-    color: #fff;
-    opacity: 1;
-    transition: all 2s ease;
-}
-.welcome-section .content-wrap .fly-in-text li:last-child {
-    margin-right: 0;
-}
-.welcome-section .content-wrap{
-    display: block;
-    text-align: center;
-    font-size: 1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #adff2f;
-    opacity: 1;
-    transition: all 1s ease 2s;
-}
-
-.welcome-section.content-hidden .content-wrap .fly-in-text li { opacity:0; }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(2) { transform: translateX(20px) translateY(100px); }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(4) { transform: translateX(10px) translateY(-200px); }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(5) { transform: translateX(-300px) translateY(200px); }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(6) { transform: translateX(20px) translateY(-20px); }
-.welcome-section.content-hidden .content-wrap .fly-in-text.hidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
-
 html, body {
-	font-family: 'Open Sans', sans-serif;
-	margin: 0px;
-    background-color: white;
-    color: black;
-    height: 100%;
-    padding: 0;
+      height: 100%;
+      margin: 0;
+      padding: 0;
 }
 
-h1 {
-	clear: left;
-	display: block;
+body {
+      overflow: hidden;
 }
 
-p {
-    line-height: 25px;
+.icon {
+      padding-top: 20px;
+      margin-left: 12px;
+      height: 30px;
 }
 
-.info {
-    list-style: none;
-    padding-left: 0;
+.icon-resume {
+      padding-top: 15px;
+      height: 55px;
 }
 
-.notes {
-    padding-left: 20px;
+/*Responsive navigation*/
+.toggle-btn {
+     position: fixed;
+     margin: 1.4em;
+     padding: 1em;
+     width: 40px;
+     height: 12px;
+     right: 0;
+     z-index: 2;
+     transition: opacity .3s ease-out;
 }
 
-/* Navigation bar */
-.navbar {
-    z-index: 200;
-    overflow: hidden;
-    background-color: white;
-    /*background: rgba(0, 0, 0, 0.4);*/
-    position: fixed;
-    /* Set navbar to fixed position */
-    top: 0;
-    /* Position navbar at top of page */
-    width: 100%;
-    /* Full width */
-    letter-spacing: 1px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.toggle-btn:hover {
+      cursor: pointer;
+      opacity: 0.7;
 }
 
-/* Menu icon for small window sizes */
-.navbar img {
-    width: 25px;
-    padding: 8px;
-    margin: auto;
-    display: none;
+span.one {
+     position: absolute;
+     width: 40px;
+     height: 2px;
+     background: #fff;
 }
 
-.navbar img:hover {
-    opacity: 0.7;
-    cursor: pointer;
+span.two {
+     position: absolute;
+     width: 40px;
+     height: 2px;
+     background: #fff;
+     margin-top: 12px;
 }
 
-#myMenu {
-    text-align: center;
-    padding-right: 40px;
+.menu {
+     z-index: 1;
+     position: fixed;
+     background: #101010;
+     height: 100vh;
+     width: 100%;
+     top: -100%;
 }
 
-#myMenu li {
-    display: block;
-    /* Adjust line height of dropdown menu links */
-    line-height: 30px;
+.data {
+     padding: 8em 0 0 2em;
+     text-align: left;
 }
 
-#myMenu a {
-    /* Smooth transition opacity when hover */
-    transition: opacity .3s ease-out;
-    -moz-transition: opacity .3s ease-out;
-    -webkit-transition: opacity .3s ease-out;
-    -o-transition: opacity .3s ease-out;
+ul {
+     list-style: none;
 }
 
-#myMenu a:hover {
-    opacity: 0.5;
+li:first-child {
+     color: grey;
+     font-family: Poppins;
+     font-size: 24px;
 }
 
-/* Align list in center horizontally */
-.nav {
-    text-align: center;
+li:not(:first-child) {
+     color: #fff;
+     font-size: 42px;
 }
 
-.nav li {
-    display: inline;
+.data a {
+     text-decoration: none;
+     color: #fff;
+     font-family: Poppins;
+     transition: opacity .3s ease-out;
 }
 
-/* Links inside navbar */
-.navbar a {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding-right: 10px;
-    padding-left: 10px;
-    text-decoration: none;
-    /* Smooth transition opacity when hover */
-    transition: opacity .3s ease-out;
-    -moz-transition: opacity .3s ease-out;
-    -webkit-transition: opacity .3s ease-out;
-    -o-transition: opacity .3s ease-out;
+.data a:hover {
+      opacity: 0.7;
 }
 
-.nav a:hover {
-    opacity: 0.5;
-}
-
-#particles-js {
-    height: 100%;
-    background: #8c8c8c;
-}
-
-.slider {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    background: #f4f4f4;
-}
-
-.slider-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
+/*Cards*/
 .slide {
-    float: left;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s linear;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
 }
 
-.slider-wrapper>.slide:first-child {
-    opacity: 1;
+.card {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      background: #fff;
 }
 
-.name {
-    /* Position text in the center of the screen (horizontally & vertically) */
-    z-index: 100;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+.card-img {
+      background-position: center;
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
 }
 
-.name p {
-    color: black;
-    text-align: center;
-    font-size: 65px;
+#img01 {
+      background-image: url("img/profile/sherman.jpg");
 }
 
-/* typed js cursor */
-.typed-cursor {
-    opacity: 1;
-    animation: blink .7s infinite;
+#img02 {
+      background-image: url("img/education/sfu.jpg");
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+#img03 {
+      background-image: url("img/experience/intel.jpg");
+}
+
+#img04 {
+      background-image: url("img/experience/sierrawireless.png");
+}
+
+#img05 {
+      background-image: url("img/projects/musync.png");
+}
+
+#img06 {
+      background-image: url("img/projects/shogi.png");
+}
+
+#img07 {
+      background-image: url("img/projects/boundedbuffer.png");
+}
+
+.card-content {
+      padding: 10% 5%;
+      box-sizing: border-box;
+      width: 50%;
+      background: #0A0A0A;
+}
+
+.card-contact {
+      padding: 10% 5%;
+      box-sizing: border-box;
+      width: 100%;
+      background: #0A0A0A;     
+}
+
+.card-theme {
+      font-weight: 900;
+      font-size: 1.7vmin;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      color: grey;
+}
+
+.card-header {
+      font-weight: 700;
+      font-size: 54px;
+      text-transform: capitalize;
+      line-height: 1;
+      margin: 3vmin 0 3.5vmin;
+      color: #fff;
+}
+
+.card-para {
+      font-size: 1.8vmin;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 2.5vmin;
+      color: #fff;
+}
+
+.card-link {
+      color: #fff;
+      font-size: 1.8vmin;
+      cursor: pointer;
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+      text-align: right;
+}
+
+.card-link:hover {
+      opacity: 0.4;
+}
+
+.card-link:after {
+      content: " →";
 }
 
 
-/* About Me Section */
-#about {
-    /*border: 1px solid black;*/
-    padding-top: 55px;
-    padding-bottom: 80px;
-    margin-left: 10%;
-    margin-right: 10%;
+/*Content slider*/
+.prevnext {
+      position: fixed;
+      width: 4vmin;
+      height: 8vmin;
+      right: 2%;
+      bottom: 0;
+      top: 80%;
+      color: #fff;
+      margin: auto 0;
 }
 
-#about h1 {
-    text-align: center;
+.pn-btn {
+      color: #fff;
+      width: 100%;
+      height: 50%;
+      border: 0;
+      background-color: transparent;
+      font-size: 20px;
 }
 
-#about a {
-    text-decoration: none;
-    color: inherit;
-    color: #5182d1;
+#prev, #next {
+      position: relative;
+      cursor: pointer;
 }
 
-#resume:hover {
-    opacity: 0.7;
+#prev:focus, #next:focus {
+      outline: none;
 }
 
-/* Work Experience Section */
-#experience {
-    padding-top: 55px;
-    padding-bottom: 55px;
-    background-color: #f4f4f4;
+#prev:hover:after, #next:hover:after {
+      opacity: 1;
 }
 
-#experience h1 {
-    text-align: center;
+#prev:after, #next:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
 }
 
-#first {
-    width: 25%;
-    float: left;
-    margin-right: 70px;
-    margin-left: 10%;
+#prev:after {
+      content: "↑";
 }
 
-#second {
-    width: 55%;
-    float: left;
-    margin-bottom: 100px;
-}
-
-/* Education Section */
-#education {
-    padding-bottom: 200px;
-    background-color: #f4f4f4;
-}
-
-#education h1 {
-    text-align: center;
-}
-
-
-
-/* Projects */
-#projects {
-	/*border: 1px solid black;*/
-	padding-top: 55px;
-    width: 80%;
-    margin: 10px auto;
-    position: relative;
-    text-align: center;
-}
-
-#projects h1 {
-	text-align: center;
-}
-
-.block {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.textOverImage {
-	position: relative;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin: 4px;
-	background-size: 100%;
-	background-position: center;
-	transition: 0.5s;
-	text-align: left;
-}
-
-.textOverImage:hover {
-	background-size: 110%;
-}
-
-.textOverImage:after {
-	position: absolute;
-    top: 92.2%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    white-space: pre-wrap;
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 0 8px;
-  
-    content: attr(data-text);
-    transition: 0.5s;
-}
-
-.textOverImage:hover:after {
-	top: 0;
-	padding: 8px;
-	background-color: rgba(0,0,0,0.7);
-}
-
-.textOverImage:first-line {
-	color: #fff;
-	font-weight: bold;
-	font-szie: 1.5em;
-}
-
-#projects {
-	margin-bottom: 100px;
-}
-
-/* Contact Info Section */
-#contact {
-    padding-top: 60px;
-    padding-bottom: 250px;
-}
-
-#contact h1 {
-    text-align: center;
-}
-
-#left {
-    float: left;
-}
-
-#right {
-    float: right;
-}
-
-#contact a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#contactInfo {
-    /* Place this div in the center horizontally */
-    width: 400px;
-    margin: auto;
-}
-
-img#icon {
-    height: 35px;
-    margin: 3px;
-    border: 0 none;
-    position: relative;
-    top: 12px;
-    padding-right: 5px;
-}
-
-#icon {
-    text-decoration: none;
-}
-
-img#iconLoc {
-    height: 20px;
-    margin: 3px;
-    border: 0 none;
-    position: relative;
-    top: 7px;
-    padding-right: 5px;
-}
-
-#iconLoc {
-    text-decoration: none;
-}
-
-/* Content at bottom of page */
-footer {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    opacity: 0.7;
-}
-
-#backToTop {
-    bottom: 0px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    opacity: 0.5;
-}
-
-#backToTop img {
-    width: 35px;
-    opacity: 1.3;
-    transition: opacity .2s ease-out;
-    -moz-transition: opacity .2s ease-out;
-    -webkit-transition: opacity .2s ease-out;
-    -o-transition: opacity .2s ease-out;
-}
-
-#backToTop img:hover {
-    opacity: 0.4
-}
-
-#end {
-    background-color: #f4f4f4;
+#next:after {
+      content: "↓";
 }
