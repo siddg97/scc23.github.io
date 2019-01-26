@@ -8,6 +8,10 @@ body {
       overflow: hidden;
 }
 
+.icon-link {
+      text-decoration: none;
+}
+
 .icon {
       padding-top: 20px;
       margin-left: 12px;
