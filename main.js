@@ -31,10 +31,10 @@ $(document).ready(function() {
 
       // Slide out navigation menu when the user clicks the toggle button or a link
       t1.reverse();
-      $(document).on("click", ".toggle-btn", function() {
+      $(document).on("click touchstart", ".toggle-btn", function() {
            t1.reversed(!t1.reversed());
       });
-      $(document).on("click", ".data a", function() {
+      $(document).on("click touchstart", ".data a", function() {
             t1.reversed(!t1.reversed());
       });
 
