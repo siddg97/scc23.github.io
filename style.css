@@ -1,263 +1,263 @@
 html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-      overflow: hidden;
+    overflow: hidden;
 }
 
 .icon-link {
-      text-decoration: none;
+    text-decoration: none;
 }
 
 .icon {
-      padding-top: 20px;
-      margin-left: 12px;
-      height: 30px;
+    padding-top: 20px;
+    margin-left: 12px;
+    height: 30px;
 }
 
 .icon-resume {
-      padding-top: 15px;
-      height: 55px;
+    padding-top: 15px;
+    height: 55px;
 }
 
 /*Responsive navigation*/
 .toggle-btn {
-     position: fixed;
-     margin: 1.4em;
-     padding: 1em;
-     width: 40px;
-     height: 12px;
-     right: 0;
-     z-index: 2;
-     transition: opacity .3s ease-out;
+    position: fixed;
+    margin: 1.4em;
+    padding: 1em;
+    width: 40px;
+    height: 12px;
+    right: 0;
+    z-index: 2;
+    transition: opacity .3s ease-out;
 }
 
 .toggle-btn:hover {
-      cursor: pointer;
-      opacity: 0.7;
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 span.one {
-     position: absolute;
-     width: 40px;
-     height: 2px;
-     background: #fff;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #fff;
 }
 
 span.two {
-     position: absolute;
-     width: 40px;
-     height: 2px;
-     background: #fff;
-     margin-top: 12px;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    margin-top: 12px;
 }
 
 .menu {
-     z-index: 1;
-     position: fixed;
-     background: #101010;
-     height: 100vh;
-     width: 100%;
-     top: -100%;
+    z-index: 1;
+    position: fixed;
+    background: #101010;
+    height: 100vh;
+    width: 100%;
+    top: -100%;
 }
 
 .data {
-     padding: 8em 0 0 2em;
-     text-align: left;
+    padding: 8em 0 0 2em;
+    text-align: left;
 }
 
 ul {
-     list-style: none;
+    list-style: none;
 }
 
 li:first-child {
-     color: grey;
-     font-family: Poppins;
-     font-size: 24px;
+    color: grey;
+    font-family: Poppins;
+    font-size: 24px;
 }
 
 li:not(:first-child) {
-     color: #fff;
-     font-size: 42px;
+    color: #fff;
+    font-size: 42px;
 }
 
 .data a {
-     text-decoration: none;
-     color: #fff;
-     font-family: Poppins;
-     transition: opacity .3s ease-out;
+    text-decoration: none;
+    color: #fff;
+    font-family: Poppins;
+    transition: opacity .3s ease-out;
 }
 
 .data a:hover {
-      opacity: 0.7;
+    opacity: 0.7;
 }
 
 /*Cards*/
 .slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .card {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      background: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #fff;
 }
 
 .card-img {
-      background-position: center;
-      width: 50%;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #img01 {
-      background-image: url("img/profile/sherman.jpg");
+    background-image: url("img/profile/sherman.jpg");
 }
 
 #img02 {
-      background-image: url("img/education/sfu.jpg");
+    background-image: url("img/education/sfu.jpg");
 }
 
 #img03 {
-      background-image: url("img/experience/intel.jpg");
+    background-image: url("img/experience/intel.jpg");
 }
 
 #img04 {
-      background-image: url("img/experience/sierrawireless.png");
+    background-image: url("img/experience/sierrawireless.png");
 }
 
 #img05 {
-      background-image: url("img/projects/musync.png");
+    background-image: url("img/projects/musync.png");
 }
 
 #img06 {
-      background-image: url("img/projects/shogi.png");
+    background-image: url("img/projects/shogi.png");
 }
 
 #img07 {
-      background-image: url("img/projects/boundedbuffer.png");
+    background-image: url("img/projects/boundedbuffer.png");
 }
 
 .card-content {
-      padding: 10% 5%;
-      box-sizing: border-box;
-      width: 50%;
-      background: #0A0A0A;
+    padding: 10% 5%;
+    box-sizing: border-box;
+    width: 50%;
+    background: #0A0A0A;
 }
 
 .card-contact {
-      padding: 10% 5%;
-      box-sizing: border-box;
-      width: 100%;
-      background: #0A0A0A;     
+    padding: 10% 5%;
+    box-sizing: border-box;
+    width: 100%;
+    background: #0A0A0A;
 }
 
 .card-theme {
-      font-weight: 900;
-      font-size: 1.7vmin;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      color: grey;
+    font-weight: 900;
+    font-size: 1.7vmin;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: grey;
 }
 
 .card-header {
-      font-weight: 700;
-      font-size: 54px;
-      text-transform: capitalize;
-      line-height: 1;
-      margin: 3vmin 0 3.5vmin;
-      color: #fff;
+    font-weight: 700;
+    font-size: 54px;
+    text-transform: capitalize;
+    line-height: 1;
+    margin: 3vmin 0 3.5vmin;
+    color: #fff;
 }
 
 .card-para {
-      font-size: 1.8vmin;
-      line-height: 1.8;
-      font-weight: 300;
-      margin-bottom: 2.5vmin;
-      color: #fff;
+    font-size: 1.8vmin;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 2.5vmin;
+    color: #fff;
 }
 
 .card-link {
-      color: #fff;
-      font-size: 1.8vmin;
-      cursor: pointer;
-      text-decoration: none;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-      text-align: right;
+    color: #fff;
+    font-size: 1.8vmin;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    text-align: right;
 }
 
 .card-link:hover {
-      opacity: 0.4;
+    opacity: 0.4;
 }
 
 .card-link:after {
-      content: " →";
+    content: " →";
 }
 
 
 /*Content slider*/
 .prevnext {
-      position: fixed;
-      width: 4vmin;
-      height: 8vmin;
-      right: 2%;
-      bottom: 0;
-      top: 80%;
-      color: #fff;
-      margin: auto 0;
+    position: fixed;
+    width: 4vmin;
+    height: 8vmin;
+    right: 2%;
+    bottom: 0;
+    top: 80%;
+    color: #fff;
+    margin: auto 0;
 }
 
 .pn-btn {
-      color: #fff;
-      width: 100%;
-      height: 50%;
-      border: 0;
-      background-color: transparent;
-      font-size: 20px;
+    color: #fff;
+    width: 100%;
+    height: 50%;
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
 }
 
 #prev, #next {
-      position: relative;
-      cursor: pointer;
+    position: relative;
+    cursor: pointer;
 }
 
 #prev:focus, #next:focus {
-      outline: none;
+    outline: none;
 }
 
 #prev:hover:after, #next:hover:after {
-      opacity: 1;
+    opacity: 1;
 }
 
 #prev:after, #next:after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }
 
 #prev:after {
-      content: "↑";
+    content: "↑";
 }
 
 #next:after {
-      content: "↓";
+    content: "↓";
 }
