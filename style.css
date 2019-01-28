@@ -9,12 +9,18 @@ body {
 }
 
 footer {
-    z-index: 1;
     position: relative;
     font-size: 1.6vmin;
-    opacity: 0.3;
     color: #fff;
+    opacity: 0.25;
+    text-align: center;
     bottom: 5%;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #fff;
 }
 
 .icon-link {
