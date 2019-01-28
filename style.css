@@ -8,6 +8,15 @@ body {
     overflow: hidden;
 }
 
+footer {
+    z-index: 1;
+    position: relative;
+    font-size: 1.6vmin;
+    opacity: 0.3;
+    color: #fff;
+    bottom: 5%;
+}
+
 .icon-link {
     text-decoration: none;
 }
